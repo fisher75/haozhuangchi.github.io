@@ -9,7 +9,6 @@ permalink: /cv/
 ### Quick contact
 - Location: Singapore  
 - Email: chi1996705@outlook.com  
-- Phone: +65 88649379  
 - LinkedIn: https://www.linkedin.com/in/haozhuang-chi
 
 If you want, I can also generate:
