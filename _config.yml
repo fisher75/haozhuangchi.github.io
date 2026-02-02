@@ -1,0 +1,53 @@
+title: "Haozhuang Chi"
+subtitle: "Autonomous Driving AI • Multimodal & World Models"
+name: "Haozhuang Chi"
+description: "PhD (Autonomous Driving AI) — Multimodal LLMs, VLA, and world models for safety-critical perception & prediction."
+url: ""
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+locale: "en-US"
+encoding: "utf-8"
+markdown: kramdown
+
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+author:
+  name: "Haozhuang Chi"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Autonomous Driving AI • Multimodal LLMs • VLA & World Models"
+  location: "Singapore / Shanghai"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:chi1996705@outlook.com"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/haozhuang-chi"
+    - label: "CV (PDF)"
+      icon: "fas fa-file-pdf"
+      url: "/assets/cv/Haozhuang_Chi_CV.pdf"
+
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/haozhuang-chi"
+
