@@ -12,16 +12,20 @@ header:
     - label: "CV (PDF)"
       url: /assets/cv/Haozhuang_Chi_CV.pdf
 excerpt: >
-  PhD (Autonomous Driving AI) working on **Multimodal LLMs**, **VLA**, and **World Models** for safety-critical perception, prediction, and decision-making.
+  PhD (Autonomous Driving & Embodied AI) working on **Multimodal LLMs**, **VLA**, and **World Models** for safety-critical perception, prediction, and decision-making.
 ---
 
 {% include langbar.html %}
 
-## Hi, I'm Haozhuang 👋
+## Hi, I'm Haozhuang 👋 Also known as Fisher sometimes~
 
 <div class="intro-split">
   <div>
-    I build **research-grade systems** that are also **engineering-ready**: clear protocols, strong baselines, reproducibility, and product-style demos.
+    I turn fast-moving AI ideas into reliable, measurable systems.
+    
+    Grounded in rigorous research, I stay on top of what’s next—VLA, world models, multimodal agents—and translate it into end-to-end solutions with clear protocols, robust evaluation, and demo-ready deliverables.
+
+    Academic rigor. Industry speed. Always current.
 
     <div class="logo-strip">
       <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/></a>
@@ -36,10 +40,14 @@ excerpt: >
   </div>
 </div>
 
+### Open for Jobs globally (2027–)
+**Graduation:** before Jan 2027.
 
 ### Academic × Industry positioning (2026–)
 - **Academic:** rigorous experiments, publications, interpretability, failure-case analysis  
 - **Industry:** end-to-end pipelines (data → training → eval → demo), robustness, deployment constraints  
+
+
 
 ---
 

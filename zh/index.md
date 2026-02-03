@@ -17,11 +17,12 @@ excerpt: >
 
 {% include langbar.html %}
 
-## 你好，我是迟浩壮 👋
+## Halo，我是迟浩壮 👋
 
 <div class="intro-split">
   <div>
-    我的目标是把研究做成“可交付资产”：**严谨实验 + 可复现 + 可落地**（数据→训练→评测→Demo）。
+    我的目标是把研究做成“可交付资产”：严谨实验 + 可复现 + 可落地（数据→训练→评测→Demo）。
+    学术前沿，工程落地，热点敏捷。
 
     <div class="logo-strip">
       <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/></a>
