@@ -20,7 +20,7 @@ excerpt: >
 I build **research-grade systems** that are also **engineering-ready**: clear protocols, strong baselines, reproducibility, and product-style demos.
 
 <div class="badge-row">
-  <img src="{{ '/assets/images/logo_automan.png' | relative_url }}" alt="Automan Lab"/>
+  <img src="{{ '/assets/images/automan.png' | relative_url }}" alt="Automan Lab"/>
   <img src="{{ '/assets/images/NTU-Singapore-1024x368' | relative_url }}" alt="NTU"/>
   <img src="{{ '/assets/images/TUM-logo-1-e1646633307305-954x406' | relative_url }}" alt="TUM"/>
   <img src="{{ '/assets/images/Uni_stuttgart_logo.svg' | relative_url }}" alt="Uni Stuttgart"/>
