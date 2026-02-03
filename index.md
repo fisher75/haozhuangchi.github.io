@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#000"
-  overlay_filter: "0.25"
+  overlay_filter: "0.35"
   overlay_image: /assets/images/cover.jpg
   actions:
     - label: "Projects"
@@ -11,37 +11,71 @@ header:
     - label: "CV (PDF)"
       url: /assets/cv/Haozhuang_Chi_CV.pdf
 excerpt: >
-  PhD researcher in **Autonomous Driving AI** — building **multimodal & world-model systems** for safety-critical perception, prediction, and decision-making.
-feature_row:
-  - image_path: /assets/images/project_vlmdm.jpg
-    alt: "VLM-DM"
-    title: "VLM-DM (IEEE IV 2025)"
-    excerpt: "Visual Language Models for multitask domain adaptation in driver monitoring (distraction / emotion / drowsiness)."
-    url: /projects/vlm-dm/
-    btn_label: "Project page"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/project_cabinwm.jpg
-    alt: "Cabin-WM"
-    title: "Cabin-WM"
-    excerpt: "Driver-centric world model: rollout internal dynamics (skeleton trajectories) with external traffic context."
-    url: /projects/#cabin-wm
-    btn_label: "Overview"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/project_auttc.jpg
-    alt: "AU-TTC"
-    title: "AU‑TTC"
-    excerpt: "Time-to-collision regression + impact object prediction via prompting on video frames."
-    url: /projects/#au-ttc
-    btn_label: "Overview"
-    btn_class: "btn--primary"
+  PhD (Autonomous Driving AI) working on **Multimodal LLMs**, **VLA**, and **World Models** for safety-critical perception, prediction, and decision-making.
 ---
 
+{% include langbar.html %}
+
 ## Hi, I'm Haozhuang 👋
+I build **research-grade systems** that are also **engineering-ready**: clear protocols, strong baselines, reproducibility, and product-style demos.
 
-I work on **multimodal large models**, **VLA (Vision-Language-Action)** and **world models** for **autonomous driving** and **robotics** — with an emphasis on **safety**, **interpretability**, and **reproducibility**.
+<div class="badge-row">
+  <img src="{{ '/assets/images/logo_automan.png' | relative_url }}" alt="Automan Lab"/>
+  <img src="{{ '/assets/images/logo_ntu.png' | relative_url }}" alt="NTU"/>
+  <img src="{{ '/assets/images/logo_tum.png' | relative_url }}" alt="TUM"/>
+  <img src="{{ '/assets/images/logo_ustuttgart.png' | relative_url }}" alt="Uni Stuttgart"/>
+</div>
 
-- **Current:** PhD student at NTU (MAE), Automan Lab (2023–2027)
-- **Previously:** MSc at TUM (Robotics, Cognition, Intelligence); internships/projects across autonomous driving and AI
-- **Contact:** chi1996705@outlook.com • +65 8864 9379
+### Academic × Industry positioning (2026–)
+- **Academic:** rigorous experiments, publications, interpretability, failure-case analysis  
+- **Industry:** end-to-end pipelines (data → training → eval → demo), robustness, deployment constraints  
 
-{% include feature_row %}
+---
+
+## Featured Projects
+<div class="card-grid">
+
+  <div class="card">
+    <a href="{{ '/projects/vlm-dm/' | relative_url }}"><img src="{{ '/assets/images/card_vlmdm.jpg' | relative_url }}" alt="VLM-DM" /></a>
+    <div class="card-body">
+      <div class="card-title">VLM-DM (IEEE IV 2025)</div>
+      <p class="card-text">Unified VLM for multitask driver monitoring with LoRA (distraction / emotion / drowsiness).</p>
+      <p><a class="btn btn--primary" href="{{ '/projects/vlm-dm/' | relative_url }}">Project page</a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="{{ '/projects/' | relative_url }}#vla-world-models"><img src="{{ '/assets/images/card_vla.jpg' | relative_url }}" alt="VLA & World Models" /></a>
+    <div class="card-body">
+      <div class="card-title">VLA & World Models</div>
+      <p class="card-text">Video-language(-action) interfaces and world-model rollouts for safety & planning.</p>
+      <p><a class="btn btn--primary" href="{{ '/projects/' | relative_url }}#vla-world-models">Overview</a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="{{ '/projects/' | relative_url }}#cabin-wm"><img src="{{ '/assets/images/card_cabinwm.jpg' | relative_url }}" alt="Cabin-WM" /></a>
+    <div class="card-body">
+      <div class="card-title">Cabin-WM</div>
+      <p class="card-text">Driver-centric world model: rollout internal dynamics with multi-view context.</p>
+      <p><a class="btn btn--primary" href="{{ '/projects/' | relative_url }}#cabin-wm">Overview</a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="{{ '/projects/' | relative_url }}#au-ttc"><img src="{{ '/assets/images/card_auttc.jpg' | relative_url }}" alt="AU-TTC" /></a>
+    <div class="card-body">
+      <div class="card-title">AU‑TTC</div>
+      <p class="card-text">Frame-based TTC regression + impact object prediction via prompting.</p>
+      <p><a class="btn btn--primary" href="{{ '/projects/' | relative_url }}#au-ttc">Overview</a></p>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## Quick links
+- **CV (PDF):** [Haozhuang_Chi_CV.pdf]({{ '/assets/cv/Haozhuang_Chi_CV.pdf' | relative_url }})
+- **IV 2025 paper (PDF):** [VLM-DM_IV2025.pdf]({{ '/assets/papers/VLM-DM_IV2025.pdf' | relative_url }})
+- **LinkedIn:** https://www.linkedin.com/in/haozhuang-chi

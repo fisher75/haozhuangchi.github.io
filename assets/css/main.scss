@@ -1,0 +1,21 @@
+---
+---
+
+@import "minimal-mistakes";
+
+.page__hero--overlay .page__title { letter-spacing: -0.02em; }
+.page__hero--overlay .page__lead { font-size: 1.15rem; max-width: 60ch; }
+.btn--primary { border-radius: 999px; padding: 0.6rem 1.05rem; }
+.btn { border-radius: 999px; }
+.archive__item-teaser img { border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,0.25); }
+.notice--info { border-radius: 14px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.1rem; }
+.card {
+  border-radius: 18px; overflow: hidden; box-shadow: 0 10px 26px rgba(0,0,0,.22);
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
+}
+.card .card-body { padding: 1rem 1rem 1.1rem 1rem; }
+.card .card-title { margin: 0.1rem 0 0.35rem 0; font-size: 1.05rem; font-weight: 700; }
+.card .card-text { margin: 0; opacity: 0.92; }
+.badge-row { display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center; margin: 0.9rem 0 0.2rem 0; }
+.badge-row img { height: 42px; border-radius: 999px; box-shadow: 0 8px 18px rgba(0,0,0,0.18); }

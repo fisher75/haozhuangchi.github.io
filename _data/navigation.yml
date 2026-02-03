@@ -1,4 +1,6 @@
 main:
+  - title: "Home"
+    url: /
   - title: "About"
     url: /about/
   - title: "Projects"
@@ -7,3 +9,5 @@ main:
     url: /publications/
   - title: "CV"
     url: /cv/
+  - title: "中文"
+    url: /zh/

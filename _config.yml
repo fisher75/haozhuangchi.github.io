@@ -1,25 +1,42 @@
 title: "Haozhuang Chi"
-subtitle: "Autonomous Driving AI • Multimodal & World Models"
-name: "Haozhuang Chi"
-description: "PhD (Autonomous Driving AI) — Multimodal LLMs, VLA, and world models for safety-critical perception & prediction."
-url: ""
-baseurl: ""
+description: "Autonomous Driving AI • Multimodal LLMs • VLA & World Models"
+url: "https://fisher75.github.io"
+baseurl: "/haozhuangchi.github.io"
 
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "contrast"
 
 plugins:
   - jekyll-include-cache
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
+markdown: kramdown
 locale: "en-US"
 encoding: "utf-8"
-markdown: kramdown
 
 include:
   - _pages
+  - zh
+
+author:
+  name: "Haozhuang Chi (迟浩壮)"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Autonomous Driving AI • Multimodal & World Models"
+  location: "Singapore / Shanghai"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:chi1996705@outlook.com"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/haozhuang-chi"
+    - label: "CV"
+      icon: "fas fa-file-pdf"
+      url: "/assets/cv/Haozhuang_Chi_CV.pdf"
+    - label: "Paper (IV 2025)"
+      icon: "fas fa-book"
+      url: "/assets/papers/VLM-DM_IV2025.pdf"
 
 defaults:
   - scope:
@@ -29,25 +46,4 @@ defaults:
       layout: single
       author_profile: true
 
-author:
-  name: "Haozhuang Chi"
-  avatar: "/assets/images/avatar.jpg"
-  bio: "Autonomous Driving AI • Multimodal LLMs • VLA & World Models"
-  location: "Singapore / Shanghai"
-  links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:chi1996705@outlook.com"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/haozhuang-chi"
-    - label: "CV (PDF)"
-      icon: "fas fa-file-pdf"
-      url: "/assets/cv/Haozhuang_Chi_CV.pdf"
-
-footer:
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/haozhuang-chi"
-
+reading_time: true
