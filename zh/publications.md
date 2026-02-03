@@ -1,6 +1,7 @@
 ---
 title: "论文"
 permalink: /zh/publications/
+nav: main_zh
 ---
 
 {% include langbar.html %}

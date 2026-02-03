@@ -11,3 +11,17 @@ main:
     url: /cv/
   - title: "中文"
     url: /zh/
+
+main_zh:
+  - title: "主页"
+    url: /zh/
+  - title: "关于"
+    url: /zh/about/
+  - title: "项目"
+    url: /zh/projects/
+  - title: "论文"
+    url: /zh/publications/
+  - title: "简历"
+    url: /zh/cv/
+  - title: "EN"
+    url: /

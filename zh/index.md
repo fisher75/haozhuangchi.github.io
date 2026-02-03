@@ -1,9 +1,10 @@
 ---
 layout: splash
 permalink: /zh/
+nav: main_zh
 header:
   overlay_color: "#000"
-  overlay_filter: "0.35"
+  overlay_filter: "0.25"
   overlay_image: /assets/images/cover.jpg
   actions:
     - label: "项目 Projects"
@@ -17,14 +18,24 @@ excerpt: >
 {% include langbar.html %}
 
 ## 你好，我是迟浩壮 👋
-我的目标是把研究做成“可交付资产”：**严谨实验 + 可复现 + 可落地**（数据→训练→评测→Demo）。
 
-<div class="badge-row">
-  <img src="{{ '/assets/images/logo_automan.png' | relative_url }}" alt="Automan Lab"/>
-  <img src="{{ '/assets/images/logo_ntu.png' | relative_url }}" alt="NTU"/>
-  <img src="{{ '/assets/images/logo_tum.png' | relative_url }}" alt="TUM"/>
-  <img src="{{ '/assets/images/logo_ustuttgart.png' | relative_url }}" alt="Uni Stuttgart"/>
+<div class="intro-split">
+  <div>
+    我的目标是把研究做成“可交付资产”：**严谨实验 + 可复现 + 可落地**（数据→训练→评测→Demo）。
+
+    <div class="logo-strip">
+      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/></a>
+      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/NTU-Singapore-1024x368.png' | relative_url }}" alt="NTU"/></a>
+      <a class="logo-pill" href="https://www.tum.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/TUM-logo-1-e1646633307305-954x406.png' | relative_url }}" alt="TUM"/></a>
+      <a class="logo-pill" href="https://www.uni-stuttgart.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/Uni_stuttgart_logo.svg.png' | relative_url }}" alt="Uni Stuttgart"/></a>
+    </div>
+  </div>
+
+  <div class="headshot-wrap">
+    <img class="headshot" src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="迟浩壮 个人照片"/>
+  </div>
 </div>
+
 
 ### Academic × Industry 的展示逻辑（2026–）
 - **Academic：**强基线/消融/失败案例、协议清晰、可解释性  

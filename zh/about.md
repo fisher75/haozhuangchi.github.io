@@ -1,6 +1,7 @@
 ---
 title: "关于"
 permalink: /zh/about/
+nav: main_zh
 ---
 
 {% include langbar.html %}
@@ -19,5 +20,5 @@ permalink: /zh/about/
 - **本科**：斯图加特大学（德国）— 2016–2020  
 
 ### 联系方式
-- Email：chi1996705@outlook.com  
+- - Email：chih0001@e.ntu.edu.sg  
 - LinkedIn：https://www.linkedin.com/in/haozhuang-chi

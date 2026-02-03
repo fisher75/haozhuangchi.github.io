@@ -1,6 +1,7 @@
 ---
 title: "VLM-DM (IEEE IV 2025)"
 permalink: /projects/vlm-dm/
+nav: main
 ---
 
 {% include langbar.html %}

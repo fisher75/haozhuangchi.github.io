@@ -1,6 +1,7 @@
 ---
 title: "项目"
 permalink: /zh/projects/
+nav: main_zh
 ---
 
 {% include langbar.html %}

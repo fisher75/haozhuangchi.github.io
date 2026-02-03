@@ -27,7 +27,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:chi1996705@outlook.com"
+      url: "mailto:chih0001@e.ntu.edu.sg"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/haozhuang-chi"
@@ -45,5 +45,14 @@ defaults:
     values:
       layout: single
       author_profile: true
+      nav: main
+  - scope:
+      path: "zh"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      nav: main_zh
+      locale: "zh-CN"
 
 reading_time: true

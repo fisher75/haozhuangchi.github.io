@@ -1,6 +1,7 @@
 ---
 title: "About"
 permalink: /about/
+nav: main
 ---
 
 {% include langbar.html %}
@@ -20,5 +21,5 @@ I work on **Multimodal LLMs**, **VLA**, and **World Models** for safety-critical
 - **BSc**, University of Stuttgart, Germany — 2016–2020  
 
 ### Contact
-- Email: chi1996705@outlook.com  
+- Email: chih0001@e.ntu.edu.sg  
 - LinkedIn: https://www.linkedin.com/in/haozhuang-chi

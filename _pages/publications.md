@@ -1,6 +1,7 @@
 ---
 title: "Publications"
 permalink: /publications/
+nav: main
 ---
 
 {% include langbar.html %}

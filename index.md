@@ -1,9 +1,10 @@
 ---
 layout: splash
 permalink: /
+nav: main
 header:
   overlay_color: "#000"
-  overlay_filter: "0.35"
+  overlay_filter: "0.25"
   overlay_image: /assets/images/cover.jpg
   actions:
     - label: "Projects"
@@ -17,14 +18,24 @@ excerpt: >
 {% include langbar.html %}
 
 ## Hi, I'm Haozhuang 👋
-I build **research-grade systems** that are also **engineering-ready**: clear protocols, strong baselines, reproducibility, and product-style demos.
 
-<div class="badge-row">
-  <img src="{{ '/assets/images/automan.png' | relative_url }}" alt="Automan Lab"/>
-  <img src="{{ '/assets/images/NTU-Singapore-1024x368' | relative_url }}" alt="NTU"/>
-  <img src="{{ '/assets/images/TUM-logo-1-e1646633307305-954x406' | relative_url }}" alt="TUM"/>
-  <img src="{{ '/assets/images/Uni_stuttgart_logo.svg' | relative_url }}" alt="Uni Stuttgart"/>
+<div class="intro-split">
+  <div>
+    I build **research-grade systems** that are also **engineering-ready**: clear protocols, strong baselines, reproducibility, and product-style demos.
+
+    <div class="logo-strip">
+      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/></a>
+      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/NTU-Singapore-1024x368.png' | relative_url }}" alt="NTU"/></a>
+      <a class="logo-pill" href="https://www.tum.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/TUM-logo-1-e1646633307305-954x406.png' | relative_url }}" alt="TUM"/></a>
+      <a class="logo-pill" href="https://www.uni-stuttgart.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/Uni_stuttgart_logo.svg.png' | relative_url }}" alt="University of Stuttgart"/></a>
+    </div>
+  </div>
+
+  <div class="headshot-wrap">
+    <img class="headshot" src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Haozhuang Chi portrait"/>
+  </div>
 </div>
+
 
 ### Academic × Industry positioning (2026–)
 - **Academic:** rigorous experiments, publications, interpretability, failure-case analysis  
