@@ -72,3 +72,15 @@
 @media (max-width: 900px) {
   .headshot-wrap { justify-content:center; }
 }
+/* --- Make top hero (splash) shorter --- */
+.page__hero--overlay {
+  padding-top: 2.0rem !important;   /* 默认会很大，这里压缩 */
+  padding-bottom: 1.6rem !important;
+}
+
+@media (max-width: 900px) {
+  .page__hero--overlay {
+    padding-top: 1.6rem !important;
+    padding-bottom: 1.2rem !important;
+  }
+}

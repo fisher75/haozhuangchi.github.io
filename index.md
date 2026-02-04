@@ -9,8 +9,10 @@ header:
   actions:
     - label: "Projects"
       url: /projects/
-    - label: "CV (PDF)"
-      url: /assets/cv/Haozhuang_Chi_CV.pdf
+    - label: "Publications"
+      url: /publications/
+    # - label: "CV (PDF)"
+      # url: /assets/cv/Haozhuang_Chi_CV.pdf
 excerpt: >
   PhD (Autonomous Driving & Embodied AI) working on **Multimodal LLMs**, **VLA**, and **World Models** for safety-critical perception, prediction, and decision-making.
 ---
