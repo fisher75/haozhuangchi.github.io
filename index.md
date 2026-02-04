@@ -20,18 +20,37 @@ excerpt: >
 ## Hi, I'm Haozhuang 👋 Also known as Fisher sometimes~
 
 <div class="intro-split">
-  <div>
-    I turn fast-moving AI ideas into reliable, measurable systems.
-    
-    Grounded in rigorous research, I stay on top of what’s next—VLA, world models, multimodal agents—and translate it into end-to-end solutions with clear protocols, robust evaluation, and demo-ready deliverables.
+  <div class="intro-text">
+    <p>
+      I am pursuing my Ph.D. at the School of Mechanical and Aerospace Engineering, Nanyang Technological University (NTU), Singapore.
+      My research is based in the Automated Driving and Human-Machine System (AutoMan) Lab, led by Prof. Chen Lyu.
+      Alongside my Ph.D., I have been involved in research and industry collaboration through the AUMOVIO-NTU Corporate Lab (ANCL) on campus,
+      working on AI solutions that bridge academic innovation and real-world mobility needs.
+    </p>
 
-    Academic rigor. Industry speed. Always current.
+    <p>
+      My research centers on autonomous driving and multimodal machine learning, with a focus on visual-language(-action) models, world models,
+      and reliable evaluation protocols for safety-critical perception and decision support.
+      I aim to turn fast-moving ideas into measurable, reproducible systems—end-to-end pipelines from data and training to robust benchmarking and demo-ready deliverables.
+    </p>
+
+    <p>
+      Previously, I studied Robotics, Cognition, Intelligence (RCI), completing my B.Sc. at the University of Stuttgart and my M.Sc. at the Technical University of Munich (TUM).
+    </p>
 
     <div class="logo-strip">
-      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/></a>
-      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/NTU-Singapore-1024x368.png' | relative_url }}" alt="NTU"/></a>
-      <a class="logo-pill" href="https://www.tum.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/TUM-logo-1-e1646633307305-954x406.png' | relative_url }}" alt="TUM"/></a>
-      <a class="logo-pill" href="https://www.uni-stuttgart.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/Uni_stuttgart_logo.svg.png' | relative_url }}" alt="University of Stuttgart"/></a>
+      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/>
+      </a>
+      <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/logos/NTU-Singapore-1024x368.png' | relative_url }}" alt="NTU"/>
+      </a>
+      <a class="logo-pill" href="https://www.tum.de/" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/logos/TUM-logo-1-e1646633307305-954x406.png' | relative_url }}" alt="TUM"/>
+      </a>
+      <a class="logo-pill" href="https://www.uni-stuttgart.de/" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/logos/Uni_stuttgart_logo.svg.png' | relative_url }}" alt="University of Stuttgart"/>
+      </a>
     </div>
   </div>
 
