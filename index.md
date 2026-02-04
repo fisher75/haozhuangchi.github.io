@@ -37,7 +37,7 @@ excerpt: >
     </p>
 
     <p>
-      Previously, I studied Robotics, Cognition, Intelligence (RCI), completing my B.Sc. at the University of Stuttgart and my M.Sc. at the Technical University of Munich (TUM).
+      Previously, I completed my B.Sc. at the University of Stuttgart and my Robotics, Cognition, Intelligence (RCI) M.Sc. at the Technical University of Munich (TUM).
     </p>
 
     <div class="logo-strip">
