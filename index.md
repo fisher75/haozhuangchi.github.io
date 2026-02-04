@@ -19,7 +19,7 @@ excerpt: >
 
 {% include langbar.html %}
 
-## Hi, I'm Haozhuang 👋 Also known as Fisher sometimes~
+## Hi, I'm Haozhuang 👋
 
 <div class="intro-split">
   <div class="intro-text">
