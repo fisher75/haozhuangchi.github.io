@@ -9,8 +9,10 @@ nav: main_zh
 ## VLA & 世界模型
 面向安全关键推理的 video-language(-action) 与世界模型 rollout。
 
-## Cabin-WM
-以驾驶员为中心的世界模型：融合多视角上下文，rollout 内部动态。
+## Driver-WM
+交通条件驱动的潜在世界模型，用于车内驾驶员动态 rollout。
+
+- 项目页：**[Driver-WM]({{ '/driver-wm/' | relative_url }})**
 
 ## AU‑TTC
 逐帧 TTC 回归 + 撞击目标预测（提示词对话式）。

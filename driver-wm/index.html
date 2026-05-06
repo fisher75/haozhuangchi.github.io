@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout.">
+  <meta name="keywords" content="Driver-WM, world model, in-cabin dynamics, traffic-conditioned rollout, driver monitoring, autonomous driving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Driver-WM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    :root {
+      --driver-blue: #34477c;
+      --driver-blue-soft: #e8eef9;
+      --driver-orange: #ff4208;
+      --ink: #1f2933;
+      --muted: #555;
+      --rule: #d9d9d9;
+      --panel: #f5f5f5;
+      --white: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+    }
+
+    a {
+      color: hsl(204, 86%, 53%);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-body {
+      padding-top: 3.25rem;
+      padding-bottom: 2rem;
+    }
+
+    .publication-title,
+    .publication-authors,
+    .publication-affiliations,
+    .publication-links,
+    .section-title,
+    .caption,
+    .metric-label,
+    .metric-value,
+    .figure-title {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    .publication-title {
+      color: #111;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.35;
+      margin: 0 auto 1.15rem;
+      max-width: 1120px;
+    }
+
+    .venue {
+      color: var(--driver-blue);
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .publication-authors {
+      margin-bottom: 0.35rem;
+    }
+
+    .publication-affiliations {
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .author-block,
+    .affiliation-block,
+    .link-block {
+      display: inline-block;
+    }
+
+    .author-block {
+      margin: 0 0.2rem;
+    }
+
+    .affiliation-block {
+      margin: 0 0.45rem 0.25rem;
+    }
+
+    .link-block {
+      margin: 0.25rem 0.15rem;
+    }
+
+    .button.is-dark {
+      background-color: #222;
+      border-color: #222;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .button.is-dark:hover,
+    .button.is-dark:focus {
+      background-color: #000;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .logo-strip {
+      align-items: center;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      justify-content: center;
+      margin: 1.35rem auto 1.1rem;
+      max-width: 860px;
+      padding: 0.9rem 1rem;
+    }
+
+    .logo-strip img {
+      display: block;
+      object-fit: contain;
+    }
+
+    .logo-ntu {
+      height: 46px;
+      max-width: 190px;
+    }
+
+    .logo-automan {
+      height: 38px;
+      max-width: 220px;
+    }
+
+    .teaser {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    .teaser .hero-body {
+      padding-top: 0;
+      padding-bottom: 3rem;
+    }
+
+    .media-frame {
+      background: var(--panel);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .teaser-video,
+    .paper-image {
+      display: block;
+      width: 100%;
+    }
+
+    .teaser-video {
+      aspect-ratio: 3092 / 752;
+      background: var(--panel);
+      object-fit: contain;
+    }
+
+    .paper-image {
+      object-fit: contain;
+    }
+
+    .caption {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.55;
+      margin-top: 0.9rem;
+    }
+
+    .section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .section-title {
+      line-height: 1.3;
+      margin-bottom: 1.4rem;
+    }
+
+    .abstract-panel,
+    .light-panel {
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 2.15rem;
+    }
+
+    .content p {
+      line-height: 1.72;
+    }
+
+    .content.has-text-justified p {
+      line-height: 1.78;
+    }
+
+    .keyword-line {
+      color: var(--muted);
+      font-family: 'Google Sans', sans-serif;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      background: var(--driver-blue-soft);
+      border-radius: 999px;
+      color: var(--driver-blue);
+      display: inline-block;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin: 0.2rem;
+      padding: 0.35rem 0.7rem;
+    }
+
+    .contribution-list {
+      margin-top: 1.2rem;
+    }
+
+    .contribution-item {
+      border-left: 4px solid var(--driver-blue);
+      margin-bottom: 0.9rem;
+      padding-left: 0.9rem;
+    }
+
+    .contribution-item strong {
+      color: var(--driver-blue);
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    .metric-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-bottom: 1.5rem;
+    }
+
+    .metric {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 1.1rem;
+      text-align: center;
+    }
+
+    .metric-value {
+      color: var(--driver-blue);
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+      margin-top: 0.35rem;
+    }
+
+    .figure-card {
+      height: 100%;
+    }
+
+    .figure-title {
+      color: #111;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-top: 0.85rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .figure-caption {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .table-container {
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    .table {
+      margin-bottom: 0;
+    }
+
+    .table thead th {
+      color: var(--driver-blue);
+      font-family: 'Google Sans', sans-serif;
+      white-space: nowrap;
+    }
+
+    .table td,
+    .table th {
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .ours-row {
+      background: #f2f5fb;
+      font-weight: 700;
+    }
+
+    .footer {
+      background: var(--white);
+      padding-top: 2rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .footer .content {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 1023px) {
+      .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero-body {
+        padding-top: 2.1rem;
+      }
+
+      .publication-title {
+        font-size: 1.72rem !important;
+      }
+
+      .publication-authors,
+      .publication-affiliations {
+        font-size: 1rem !important;
+      }
+
+      .logo-strip {
+        gap: 0.9rem;
+      }
+
+      .logo-ntu {
+        height: 38px;
+        max-width: 160px;
+      }
+
+      .logo-automan {
+        height: 32px;
+        max-width: 170px;
+      }
+
+      .button.is-normal {
+        font-size: 0.92rem;
+      }
+
+      .abstract-panel,
+      .light-panel {
+        padding: 1.35rem;
+      }
+
+      .section {
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero publication-header">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">
+              Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=-leHBjoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Haozhuang Chi</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Daosheng Qiu</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="#">Hao Su</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="#">Haochen Liu</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Zirui Li</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Haoruo Zhang</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#">Chen Lv</a><sup>1</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-affiliations">
+              <span class="affiliation-block"><sup>1</sup>Nanyang Technological University</span>
+              <span class="affiliation-block"><sup>2</sup>Hubei University</span>
+              <span class="affiliation-block"><sup>3</sup>Osaka University</span>
+            </div>
+
+            <div class="logo-strip" aria-label="Affiliated organizations">
+              <img class="logo-ntu" src="./static/images/logos/ntu_logo.png" alt="Nanyang Technological University logo">
+              <img class="logo-automan" src="./static/images/logos/automan.png" alt="AutoMan Lab logo">
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (PDF)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (GitHub)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#results" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-widescreen">
+      <div class="hero-body">
+        <div class="media-frame">
+          <video class="teaser-video" src="./static/videos/teaser.mp4" poster="./static/images/figures/teaser.png" autoplay loop muted playsinline></video>
+        </div>
+        <h2 class="subtitle has-text-centered caption">
+          Driver-WM moves beyond recognition-only driver monitoring and scene-centric world models by rolling out future in-cabin driver dynamics conditioned on synchronized out-cabin traffic observations.
+          The page highlights controlled interventions where external traffic context is removed, swapped, or gated to probe how driver motion changes over the prediction horizon.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="abstract-panel">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 section-title">Abstract</h2>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Safe L2/L3 driving automation requires anticipating human-in-the-loop reactions during shared-control transitions. While most driving world models forecast the external environment, in-cabin intelligence remains strictly recognition-oriented and lacks multi-step rollout capabilities for driver dynamics. We introduce <strong>Driver-WM</strong>, a driver-centric latent world model that rolls out in-cabin dynamics causally conditioned on out-cabin traffic context. This formulation unifies physical kinematics forecasting with auxiliary behavioral and emotional semantic recognition.
+          </p>
+          <p>
+            Operating in a compact latent space constructed from frozen vision-language features, Driver-WM adopts a dual-stream architecture to separately encode external traffic and internal driver states. These streams are directionally coupled via a gated causal injection mechanism, which uses a learned vector gate to modulate external contextual perturbations while strictly enforcing temporal causality. Evaluations on a multi-task assistive driving benchmark demonstrate robust long-horizon geometric forecasting for reactive high-motion maneuvers and improved semantic alignment for both driver and traffic states. The explicit external-to-internal conditioning further enables controlled test-time interventions for systematic mechanism analysis.
+          </p>
+        </div>
+        <div class="keyword-line">
+          <span class="pill">World model</span>
+          <span class="pill">Driver monitoring system</span>
+          <span class="pill">Vision-language model</span>
+          <span class="pill">Human-in-the-loop driving automation</span>
+          <span class="pill">Autonomous driving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="overview">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Highlights</h2>
+        </div>
+      </div>
+
+      <div class="contribution-list content">
+        <div class="contribution-item">
+          <p><strong>Driver-centric latent world model for dynamics rollout.</strong> Driver-WM performs multi-step forecasting of in-cabin driver dynamics, unifying kinematic trajectories and auxiliary semantic factors under traffic-conditioned temporal rollout.</p>
+        </div>
+        <div class="contribution-item">
+          <p><strong>Directionally coupled dual-stream dynamics with gated injection.</strong> External traffic context is injected into internal driver dynamics through a time-causal, learned gate, supporting controllable conditioning and intervention analysis.</p>
+        </div>
+        <div class="contribution-item">
+          <p><strong>Foundation-derived state interface with unified decoding.</strong> Frozen Qwen3-VL features provide a compact perceptual interface for geometric rollout, physical priors, and semantic regularization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Method / Architecture</h2>
+        </div>
+      </div>
+
+      <div class="media-frame">
+        <img class="paper-image" src="./static/images/figures/main.png" alt="Overall architecture of Driver-WM">
+      </div>
+      <div class="content caption has-text-centered">
+        <p>
+          From synchronized in-/out-cabin videos, a frozen Qwen3-VL encoder extracts dual-stream latent features. Pooled external history perturbs the internal transition through gated causal injection, yielding autoregressive internal rollouts decoded into skeleton trajectories and auxiliary semantic predictions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="results">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Results / Demos</h2>
+        </div>
+      </div>
+
+      <div class="light-panel">
+        <div class="metric-grid">
+          <div class="metric">
+            <div class="metric-value">71.47</div>
+            <div class="metric-label">All MPJPE (px)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">3.24%</div>
+            <div class="metric-label">All d-nMPJPE</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">71.66</div>
+            <div class="metric-label">PCK@0.05</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">90.15</div>
+            <div class="metric-label">Traffic Context F1</div>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>All MPJPE</th>
+                <th>All d-nMPJPE</th>
+                <th>HM MPJPE</th>
+                <th>PCK@0.05</th>
+                <th>DBR F1</th>
+                <th>DER F1</th>
+                <th>TCR F1</th>
+                <th>VCR F1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MotionBERT</td>
+                <td>73.51</td>
+                <td>3.34</td>
+                <td>141.53</td>
+                <td>78.01</td>
+                <td>56.70</td>
+                <td>52.71</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Static pooling</td>
+                <td>68.50</td>
+                <td>3.11</td>
+                <td>134.56</td>
+                <td>72.55</td>
+                <td>54.04</td>
+                <td>60.07</td>
+                <td>26.39</td>
+                <td>14.00</td>
+              </tr>
+              <tr>
+                <td>Cross-Attn only</td>
+                <td>80.14</td>
+                <td>3.64</td>
+                <td>142.41</td>
+                <td>66.43</td>
+                <td>62.52</td>
+                <td>68.75</td>
+                <td>87.94</td>
+                <td>69.09</td>
+              </tr>
+              <tr class="ours-row">
+                <td>Driver-WM (main)</td>
+                <td>71.47</td>
+                <td>3.24</td>
+                <td>138.03</td>
+                <td>71.66</td>
+                <td>68.07</td>
+                <td>72.61</td>
+                <td>90.15</td>
+                <td>68.34</td>
+              </tr>
+              <tr>
+                <td>Non-causal reference</td>
+                <td>72.15</td>
+                <td>3.27</td>
+                <td>136.50</td>
+                <td>71.39</td>
+                <td>73.35</td>
+                <td>74.46</td>
+                <td>88.65</td>
+                <td>68.82</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="caption has-text-centered">
+          Main AIDE results under the fixed 5&rarr;5 causal rollout protocol. HM denotes the top 10% high-motion clips ranked by future-window joint displacement.
+        </p>
+      </div>
+
+      <div class="columns is-multiline is-variable is-5" style="margin-top: 1.25rem;">
+        <div class="column is-half">
+          <div class="figure-card">
+            <div class="media-frame">
+              <img class="paper-image" src="./static/images/figures/fig3_mechanism_dynamics.png" alt="Controlled interventions and high-motion horizon curve">
+            </div>
+            <h3 class="figure-title">Mechanism and Dynamics</h3>
+            <p class="figure-caption">
+              Swapping external context or disabling injection changes reactive hand motion. Horizon-wise MPJPE shows Driver-WM mitigates the long-horizon degradation observed in motion-only baselines on the high-motion tail.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="figure-card">
+            <div class="media-frame">
+              <img class="paper-image" src="./static/images/figures/fig4_filmstrip.png" alt="Qualitative filmstrip of factual and intervened rollouts">
+            </div>
+            <h3 class="figure-title">Qualitative Rollout and Intervention</h3>
+            <p class="figure-caption">
+              Predicted skeletons for future frames f6-f10 are overlaid on ground-truth in-cabin frames. Removing external context yields a visibly different hand and upper-body trajectory.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="interventions">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Controlled Interventions</h2>
+        </div>
+      </div>
+
+      <div class="light-panel">
+        <div class="content">
+          <p>
+            Driver-WM enables post-hoc test-time mechanism probes. External context can be swapped, removed, temporally shifted, or partially dropped; the injection path can also be clamped through the scalar override &lambda;<sub>CA</sub>. These interventions do not claim causal effect estimation, but they expose whether the trained rollout actually uses traffic context and whether the gated pathway is necessary.
+          </p>
+        </div>
+        <div class="table-container">
+          <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+              <tr>
+                <th>Intervention</th>
+                <th>Target</th>
+                <th>&Delta;All</th>
+                <th>&Delta;HM</th>
+                <th>&Delta;h=5</th>
+                <th>&Delta;Head</th>
+                <th>&Delta;Hands</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="ours-row">
+                <td>Factual Driver-WM</td>
+                <td>None</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td>0.000</td>
+                <td>0.000</td>
+              </tr>
+              <tr>
+                <td>do(Ext=Swap_clip)</td>
+                <td>Cross-video content swap</td>
+                <td>5.363</td>
+                <td>4.794</td>
+                <td>8.042</td>
+                <td>5.462</td>
+                <td>3.502</td>
+              </tr>
+              <tr>
+                <td>do(Ext=empty)</td>
+                <td>Remove out-cabin features</td>
+                <td>12.953</td>
+                <td>8.691</td>
+                <td>15.208</td>
+                <td>7.385</td>
+                <td>12.937</td>
+              </tr>
+              <tr>
+                <td>do(lambda_CA=0)</td>
+                <td>Disable pathway</td>
+                <td>89.641</td>
+                <td>62.232</td>
+                <td>116.751</td>
+                <td>36.783</td>
+                <td>95.666</td>
+              </tr>
+              <tr>
+                <td>do(lambda_CA=1)</td>
+                <td>Force injection</td>
+                <td>26.733</td>
+                <td>11.480</td>
+                <td>42.170</td>
+                <td>15.861</td>
+                <td>26.727</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="caption has-text-centered">
+          Larger deviations indicate stronger sensitivity to the corresponding intervention. Disabling the injection pathway produces the largest rollout deviation, especially on hand-related joints.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <p>
+          Website structure follows the Bulma-based Nerfies project page style, with typography and spacing aligned to AutoVLA-style academic project pages.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

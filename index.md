@@ -94,11 +94,11 @@ excerpt: >
   </div>
 
   <div class="card">
-    <a href="{{ '/projects/' | relative_url }}#cabin-wm"><img src="{{ '/assets/images/card_cabinwm.jpg' | relative_url }}" alt="Cabin-WM" /></a>
+    <a href="{{ '/driver-wm/' | relative_url }}"><img src="{{ '/assets/images/card_driverwm.jpg' | relative_url }}" alt="Driver-WM" /></a>
     <div class="card-body">
-      <div class="card-title">Cabin-WM</div>
-      <p class="card-text">Driver-centric world model: rollout internal dynamics with multi-view context.</p>
-      <p><a class="btn btn--primary" href="{{ '/projects/' | relative_url }}#cabin-wm">Overview</a></p>
+      <div class="card-title">Driver-WM</div>
+      <p class="card-text">Traffic-conditioned latent world model for in-cabin driver dynamics rollout.</p>
+      <p><a class="btn btn--primary" href="{{ '/driver-wm/' | relative_url }}">Project page</a></p>
     </div>
   </div>
 

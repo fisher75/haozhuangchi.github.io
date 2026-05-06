@@ -10,9 +10,10 @@ nav: main
 <a id="vla-world-models"></a>
 Focus: video-language(-action) + world-model rollout for safety-critical reasoning.
 
-## Cabin-WM
-<a id="cabin-wm"></a>
-Driver-centric world model: rollout internal dynamics conditioned on multi-view context.
+## Driver-WM
+Traffic-conditioned latent world model for in-cabin driver dynamics rollout.
+
+- Project page: **[Driver-WM]({{ '/driver-wm/' | relative_url }})**
 
 ## AU‑TTC
 <a id="au-ttc"></a>

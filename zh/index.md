@@ -66,11 +66,11 @@ excerpt: >
   </div>
 
   <div class="card">
-    <a href="{{ '/zh/projects/' | relative_url }}"><img src="{{ '/assets/images/card_cabinwm.jpg' | relative_url }}" alt="Cabin-WM" /></a>
+    <a href="{{ '/driver-wm/' | relative_url }}"><img src="{{ '/assets/images/card_driverwm.jpg' | relative_url }}" alt="Driver-WM" /></a>
     <div class="card-body">
-      <div class="card-title">Cabin-WM</div>
-      <p class="card-text">以驾驶员为中心的世界模型：融合多视角上下文，预测/rollout 内部动态。</p>
-      <p><a class="btn btn--primary" href="{{ '/zh/projects/' | relative_url }}">概览</a></p>
+      <div class="card-title">Driver-WM</div>
+      <p class="card-text">交通条件驱动的潜在世界模型，用于车内驾驶员动态 rollout。</p>
+      <p><a class="btn btn--primary" href="{{ '/driver-wm/' | relative_url }}">项目页</a></p>
     </div>
   </div>
 
