@@ -161,6 +161,12 @@
       overflow: hidden;
     }
 
+    .media-frame.is-borderless {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+    }
+
     .teaser-video,
     .paper-image {
       display: block;
@@ -316,6 +322,18 @@
       font-weight: 700;
     }
 
+    .bibtex-block {
+      background: var(--panel);
+      border-radius: 10px;
+      color: var(--ink);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      overflow-x: auto;
+      padding: 1.5rem;
+      white-space: pre;
+    }
+
     .footer {
       background: var(--white);
       padding-top: 2rem;
@@ -415,13 +433,13 @@
 
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                <a href="https://arxiv.org/pdf/2605.05092" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper (PDF)</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                <a href="https://arxiv.org/abs/2605.05092" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
                   <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
@@ -448,7 +466,7 @@
   <section class="hero teaser">
     <div class="container is-max-widescreen">
       <div class="hero-body">
-        <div class="media-frame">
+        <div class="media-frame is-borderless">
           <video class="teaser-video" src="./static/videos/teaser.mp4" poster="./static/images/figures/teaser.png" autoplay loop muted playsinline></video>
         </div>
         <h2 class="subtitle has-text-centered caption">
@@ -516,7 +534,7 @@
         </div>
       </div>
 
-      <div class="media-frame">
+      <div class="media-frame is-borderless">
         <img class="paper-image" src="./static/images/figures/main.png" alt="Overall architecture of Driver-WM">
       </div>
       <div class="content caption has-text-centered">
@@ -745,12 +763,29 @@
     </div>
   </section>
 
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">BibTeX</h2>
+        </div>
+      </div>
+
+      <pre class="bibtex-block"><code>@misc{chi2026driverwmdrivercentrictrafficconditionedlatent,
+      title={Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout},
+      author={Haozhuang Chi and Daosheng Qiu and Hao Su and Haochen Liu and Zirui Li and Haoruo Zhang and Chen Lv},
+      year={2026},
+      eprint={2605.05092},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2605.05092},
+}</code></pre>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container is-max-desktop">
       <div class="content has-text-centered">
-        <p>
-          Website structure follows the Bulma-based Nerfies project page style, with typography and spacing aligned to AutoVLA-style academic project pages.
-        </p>
       </div>
     </div>
   </footer>
