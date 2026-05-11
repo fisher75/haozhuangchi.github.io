@@ -174,7 +174,7 @@
     }
 
     .teaser-video {
-      aspect-ratio: 3092 / 752;
+      aspect-ratio: 3586 / 901;
       background: var(--panel);
       object-fit: contain;
     }
@@ -653,7 +653,7 @@
       </div>
 
       <div class="columns is-multiline is-variable is-5" style="margin-top: 1.25rem;">
-        <div class="column is-half">
+        <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
           <div class="figure-card">
             <div class="media-frame">
               <img class="paper-image" src="./static/images/figures/fig3_mechanism_dynamics.png" alt="Controlled interventions and high-motion horizon curve">
@@ -665,7 +665,19 @@
           </div>
         </div>
 
-        <div class="column is-half">
+        <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+          <div class="figure-card">
+            <div class="media-frame">
+              <img class="paper-image" src="./static/images/figures/supp_renderer_vis_5frames.png" alt="Renderer rollouts under traffic-context interventions">
+            </div>
+            <h3 class="figure-title">Renderer Rollout Under Interventions</h3>
+            <p class="figure-caption">
+              Five-step visual rollouts compare ground truth, Driver-WM, and controlled interventions that remove external context or disable cross-attention injection, showing how traffic-conditioned cues shape in-cabin dynamics.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
           <div class="figure-card">
             <div class="media-frame">
               <img class="paper-image" src="./static/images/figures/fig4_filmstrip.png" alt="Qualitative filmstrip of factual and intervened rollouts">
