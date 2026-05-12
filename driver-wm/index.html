@@ -334,6 +334,56 @@
       white-space: pre;
     }
 
+    .ack-card {
+      background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      box-shadow: 0 14px 36px rgba(31, 41, 51, 0.07);
+      padding: 2rem 2.25rem;
+      text-align: center;
+    }
+
+    .ack-kicker {
+      color: var(--muted);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    .corporate-lab-mark {
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+      max-width: 820px;
+      transition: opacity 160ms ease, transform 160ms ease;
+      width: 100%;
+    }
+
+    .corporate-lab-link {
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .corporate-lab-link:hover {
+      text-decoration: none;
+    }
+
+    .corporate-lab-link:hover .corporate-lab-mark,
+    .corporate-lab-link:focus .corporate-lab-mark {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .ack-note {
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0.85rem auto 0;
+      max-width: 720px;
+    }
+
     .footer {
       background: var(--white);
       padding-top: 2rem;
@@ -379,6 +429,14 @@
         max-width: 170px;
       }
 
+      .ack-card {
+        padding: 1.35rem;
+      }
+
+      .corporate-lab-mark {
+        max-width: 100%;
+      }
+
       .button.is-normal {
         font-size: 0.92rem;
       }
@@ -414,10 +472,10 @@
               <span class="author-block"><a href="https://scholar.google.com/citations?user=-leHBjoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Haozhuang Chi</a><sup>1</sup>,</span>
               <span class="author-block"><a href="#">Daosheng Qiu</a><sup>2</sup>,</span>
               <span class="author-block"><a href="#">Hao Su</a><sup>3</sup>,</span>
-              <span class="author-block"><a href="#">Haochen Liu</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="#">Zirui Li</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=iizqKUsAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Haochen Liu</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=nCHChhsAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Zirui Li</a><sup>1</sup>,</span>
               <span class="author-block"><a href="#">Haoruo Zhang</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="#">Chen Lv</a><sup>1</sup></span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=UKVs2CEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Chen Lv</a><sup>1</sup></span>
             </div>
 
             <div class="is-size-6 publication-affiliations">
@@ -792,6 +850,26 @@
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2605.05092},
 }</code></pre>
+    </div>
+  </section>
+
+  <section class="section" id="acknowledgements">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Acknowledgements</h2>
+        </div>
+      </div>
+
+      <div class="ack-card">
+        <p class="ack-kicker">Supported by</p>
+        <a class="corporate-lab-link" href="https://www.ntu.edu.sg/ancl" target="_blank" rel="noopener noreferrer" aria-label="AUMOVIO-NTU Corporate Lab">
+          <img class="corporate-lab-mark" src="./static/images/logos/aumovio-ntu-logo.jpg" alt="AUMOVIO-NTU Corporate Lab logo">
+        </a>
+        <p class="ack-note">
+          We thank the AUMOVIO-NTU Corporate Lab for its support and collaborative research environment.
+        </p>
+      </div>
     </div>
   </section>
 
