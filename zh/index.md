@@ -12,17 +12,26 @@ header:
     - label: "简历 CV (PDF)"
       url: /assets/cv/Haozhuang_Chi_CV.pdf
 excerpt: >
-  自动驾驶 AI 博士研究者：聚焦 **多模态大模型**、**VLA** 与 **世界模型**，面向安全关键的感知、预测与决策。
+  南洋理工大学博士生，研究自动驾驶与具身智能中的 **多模态 AI / Physical AI**、**世界模型**、**大模型** 与 **VLA**。
 ---
 
 {% include langbar.html %}
 
-## Halo，我是迟浩壮 👋
+## 您好，我是迟浩壮
 
 <div class="intro-split">
-  <div>
-    我的目标是把研究做成“可交付资产”：严谨实验 + 可复现 + 可落地（数据→训练→评测→Demo）。
-    学术前沿，工程落地，热点敏捷。
+  <div class="intro-text">
+    <p>
+      我目前是新加坡南洋理工大学机械与航空航天工程学院的博士生四年级，研究方向聚焦于自动驾驶与具身智能领域的多模态人工智能（Physical AI），尤其是世界模型、大模型、VLA 等在复杂动态场景中的感知、预测与决策应用。我在德国完成本科和硕士阶段学习，硕士毕业于慕尼黑工业大学机器人专业，并有奥迪、CARIAD、Continental 和 AUMOVIO 多家行业头部相关工作、实习与项目经历。
+    </p>
+
+    <p>
+      我的长期目标是构建面向下一代智能交通、自动驾驶和机器人系统的多模态世界模型基础能力，推动 AI 从静态感知走向动态理解、风险推演和可靠决策。我希望将前沿大模型技术真正落地到复杂动态环境中，使系统不仅能够“看懂”场景，还能够理解风险、预测未来演化，并为后续决策提供可解释、可验证的依据。
+    </p>
+
+    <p>
+      目前我主要围绕多模态世界模型、具身智能系统、内外协同感知、状态理解以及风险建模展开研究。长期关注模型的可解释性、鲁棒性和可复现性，也非常重视研究成果与真实产业需求之间的结合。
+    </p>
 
     <div class="logo-strip">
       <a class="logo-pill" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/automan.png' | relative_url }}" alt="Automan Lab"/></a>
