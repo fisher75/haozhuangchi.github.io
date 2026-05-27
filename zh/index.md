@@ -39,6 +39,13 @@ excerpt: >
       <a class="logo-pill" href="https://www.tum.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/TUM-logo-1-e1646633307305-954x406.png' | relative_url }}" alt="TUM"/></a>
       <a class="logo-pill" href="https://www.uni-stuttgart.de/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/Uni_stuttgart_logo.svg.png' | relative_url }}" alt="Uni Stuttgart"/></a>
     </div>
+
+    <div class="logo-strip logo-strip--companies" aria-label="行业经历">
+      <a class="logo-pill logo-pill--company" href="https://www.audi.com/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/audi_logo.svg' | relative_url }}" alt="Audi"/></a>
+      <a class="logo-pill logo-pill--company logo-pill--wide" href="https://cariad.technology/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/cariad_logo.svg' | relative_url }}" alt="CARIAD"/></a>
+      <a class="logo-pill logo-pill--company logo-pill--wide" href="https://www.aumovio.com/en.html" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/aumovio_logo.svg' | relative_url }}" alt="AUMOVIO"/></a>
+      <a class="logo-pill logo-pill--company logo-pill--wide" href="https://www.continental.com/en/" target="_blank" rel="noopener"><img src="{{ '/assets/images/logos/continental_logo.svg' | relative_url }}" alt="Continental"/></a>
+    </div>
   </div>
 
   <div class="headshot-wrap">

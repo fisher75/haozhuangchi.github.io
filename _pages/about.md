@@ -7,8 +7,11 @@ nav: main
 {% include langbar.html %}
 
 ### Bio
-I’m a PhD researcher in **Autonomous Driving AI** at **NTU (Automan Lab)**.  
-I work on **Multimodal LLMs**, **VLA**, and **World Models** for safety-critical perception and decision support.
+I am a fourth-year Ph.D. candidate at the School of Mechanical and Aerospace Engineering, Nanyang Technological University (NTU), Singapore, working in the Automated Driving and Human-Machine System (AutoMan) Lab led by Prof. Chen Lyu. Alongside my Ph.D., I have been involved in research and industry collaboration through the AUMOVIO-NTU Corporate Lab (ANCL), bridging academic innovation and real-world mobility needs.
+
+My research focuses on multimodal artificial intelligence for autonomous driving and embodied intelligence (Physical AI), especially world models, large models, and visual-language(-action) models for perception, prediction, risk modeling, and decision support in complex dynamic scenes. My long-term goal is to build foundational multimodal world-model capabilities that help AI move from static perception toward dynamic understanding, risk-aware future rollout, and reliable, interpretable, and verifiable decision-making.
+
+Previously, I completed my B.Sc. at the University of Stuttgart and my Robotics, Cognition, Intelligence (RCI) M.Sc. at the Technical University of Munich (TUM), with work, internship, and project experience across Audi, CARIAD, Continental, and AUMOVIO.
 
 ### Strengths (Academic × Industry)
 - **Rigor:** task definition, baselines/ablations, failure-case analysis  

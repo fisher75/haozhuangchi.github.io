@@ -45,6 +45,22 @@
   height: auto;
   object-fit: contain;
 }
+.logo-strip--companies {
+  margin-top: 0.55rem;
+}
+.logo-pill--company {
+  width: 175px;
+}
+.logo-pill--company img {
+  max-height: 32px;
+  max-width: 148px;
+}
+.logo-pill--wide {
+  width: 190px;
+}
+.logo-pill--wide img {
+  max-width: 162px;
+}
 
 /* --- Home intro split (photo visible, not blurred) --- */
 .intro-split {
