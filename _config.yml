@@ -33,10 +33,10 @@ author:
       url: "https://www.linkedin.com/in/haozhuang-chi"
     - label: "CV"
       icon: "fas fa-file-pdf"
-      url: "/assets/cv/Haozhuang_Chi_CV.pdf"
+      url: "/haozhuangchi.github.io/assets/cv/Haozhuang_Chi_CV.pdf"
     - label: "Paper (IV 2025)"
       icon: "fas fa-book"
-      url: "/assets/papers/VLM-DM_IV2025.pdf"
+      url: "/haozhuangchi.github.io/assets/papers/VLM-DM_IV2025.pdf"
 
 defaults:
   - scope:
