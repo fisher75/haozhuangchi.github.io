@@ -69,7 +69,7 @@ excerpt: >
 ## 代表项目
 <div class="card-grid">
 
-  <div class="card card--highlight card--highlight-blue">
+  <div class="card card--highlight-blue">
     <a href="{{ '/zh/projects/vlm-dm/' | relative_url }}"><img src="{{ '/assets/images/card_vlmdm.jpg' | relative_url }}" alt="VLM-DM" /></a>
     <div class="card-body">
       <div class="card-title">VLM-DM <span class="paper-badge paper-badge--blue">IEEE IV 2025</span></div>
