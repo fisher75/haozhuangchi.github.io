@@ -14,9 +14,44 @@
   border-radius: 18px; overflow: hidden; box-shadow: 0 10px 26px rgba(0,0,0,.22);
   background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
 }
+.card--highlight {
+  position: relative;
+  border: 1px solid rgba(255, 190, 82, 0.85);
+  box-shadow: 0 16px 36px rgba(255, 190, 82, 0.20), 0 10px 26px rgba(0,0,0,.22);
+}
+.card--highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 190, 82, 0.18), rgba(52, 71, 124, 0.12) 48%, transparent 72%);
+}
 .card .card-body { padding: 1rem 1rem 1.1rem 1rem; }
 .card .card-title { margin: 0.1rem 0 0.35rem 0; font-size: 1.05rem; font-weight: 700; }
 .card .card-text { margin: 0; opacity: 0.92; }
+.paper-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.35rem;
+  padding: 0.16rem 0.52rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffbe52, #fff0b8);
+  color: #1f2933;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.news-panel {
+  border-left: 4px solid #ffbe52;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 190, 82, 0.14), rgba(255,255,255,0.05));
+  padding: 1rem 1.15rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.news-panel ul {
+  margin-bottom: 0;
+}
 
 /* --- Logo strip (uniform size & shape) --- */
 .logo-strip {

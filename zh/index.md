@@ -58,6 +58,12 @@ excerpt: >
 - **Academic：**强基线/消融/失败案例、协议清晰、可解释性  
 - **Industry：**工程闭环、鲁棒性、成本/速度/部署约束  
 
+## 🔥 News
+<div class="news-panel" markdown="1">
+- **2026.06：** 🎉🎉 我们的 **Driver-WM** 论文被 **ECCV 2026** 接收！
+- **2026.01：** 🎉🎉 我们的 **R2SE** 论文被 **T-PAMI** 接收！
+</div>
+
 ---
 
 ## 代表项目
@@ -81,11 +87,11 @@ excerpt: >
     </div>
   </div>
 
-  <div class="card">
+  <div class="card card--highlight">
     <a href="{{ '/driver-wm/' | relative_url }}"><img src="{{ '/assets/images/card_driverwm.jpg' | relative_url }}" alt="Driver-WM" /></a>
     <div class="card-body">
-      <div class="card-title">Driver-WM</div>
-      <p class="card-text">交通条件驱动的潜在世界模型，用于车内驾驶员动态 rollout。</p>
+      <div class="card-title">Driver-WM <span class="paper-badge">ECCV 2026</span></div>
+      <p class="card-text">交通条件驱动的潜在世界模型，用于车内驾驶员动态 rollout。已被 ECCV 2026 接收。</p>
       <p><a class="btn btn--primary" href="{{ '/driver-wm/' | relative_url }}">项目页</a></p>
     </div>
   </div>

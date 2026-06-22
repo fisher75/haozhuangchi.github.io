@@ -79,6 +79,12 @@ excerpt: >
 ### Open for Jobs globally (2027–)
 **Graduation:** before Jan 2027.
 
+## 🔥 News
+<div class="news-panel" markdown="1">
+- **2026.06:** 🎉🎉 Our **Driver-WM** paper has been accepted by **ECCV 2026**. Cheers!
+- **2026.01:** 🎉🎉 Our **R2SE** paper has been accepted by **T-PAMI**. Cheers!
+</div>
+
 ### Academic × Industry positioning (2026–)
 - **Academic:** rigorous experiments, publications, interpretability, failure-case analysis  
 - **Industry:** end-to-end pipelines (data → training → eval → demo), robustness, deployment constraints  
@@ -108,11 +114,11 @@ excerpt: >
     </div>
   </div>
 
-  <div class="card">
+  <div class="card card--highlight">
     <a href="{{ '/driver-wm/' | relative_url }}"><img src="{{ '/assets/images/card_driverwm.jpg' | relative_url }}" alt="Driver-WM" /></a>
     <div class="card-body">
-      <div class="card-title">Driver-WM</div>
-      <p class="card-text">Traffic-conditioned latent world model for in-cabin driver dynamics rollout.</p>
+      <div class="card-title">Driver-WM <span class="paper-badge">ECCV 2026</span></div>
+      <p class="card-text">Traffic-conditioned latent world model for in-cabin driver dynamics rollout. Accepted by ECCV 2026.</p>
       <p><a class="btn btn--primary" href="{{ '/driver-wm/' | relative_url }}">Project page</a></p>
     </div>
   </div>
