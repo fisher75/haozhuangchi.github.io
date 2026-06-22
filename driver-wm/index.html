@@ -75,18 +75,27 @@
       font-weight: 700;
       letter-spacing: 0;
       line-height: 1.35;
-      margin: 0 auto 1.15rem;
+      margin: 0;
       max-width: 1120px;
     }
 
+    .title-lockup {
+      align-items: center;
+      display: flex;
+      gap: 1.15rem;
+      justify-content: center;
+      margin: 0 auto 1.15rem;
+      max-width: 1180px;
+    }
+
     .project-logo-mark {
-      border-radius: 24px;
-      box-shadow: 0 16px 38px rgba(16, 37, 66, 0.24);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(16, 37, 66, 0.18);
+      flex: 0 0 auto;
       display: block;
-      height: 118px;
-      margin: 0 auto 1.1rem;
+      height: 92px;
       object-fit: contain;
-      width: 118px;
+      width: 92px;
     }
 
     .publication-authors {
@@ -529,11 +538,16 @@
         font-size: 1.72rem !important;
       }
 
+      .title-lockup {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
       .project-logo-mark {
-        border-radius: 20px;
-        height: 92px;
-        margin-bottom: 0.9rem;
-        width: 92px;
+        border-radius: 16px;
+        height: 78px;
+        width: 78px;
       }
 
       .publication-authors,
@@ -612,11 +626,12 @@
       <div class="container is-max-widescreen">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <img class="project-logo-mark" src="./static/images/logos/driver_wm_icon.png" alt="Driver-WM project logo">
-
-            <h1 class="title is-2 publication-title">
-              Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout
-            </h1>
+            <div class="title-lockup">
+              <img class="project-logo-mark" src="./static/images/logos/driver_wm_icon.png" alt="Driver-WM project logo">
+              <h1 class="title is-2 publication-title">
+                Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout
+              </h1>
+            </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><a href="https://scholar.google.com/citations?user=-leHBjoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Haozhuang Chi</a><sup>1</sup>,</span>
