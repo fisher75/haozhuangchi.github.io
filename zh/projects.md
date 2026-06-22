@@ -9,8 +9,8 @@ nav: main_zh
 ## VLA & 世界模型
 面向安全关键推理的 video-language(-action) 与世界模型 rollout。
 
-## Driver-WM
-交通条件驱动的潜在世界模型，用于车内驾驶员动态 rollout。
+## Driver-WM <span class="paper-badge">ECCV 2026</span>
+交通条件驱动的潜在世界模型，用于车内驾驶员动态 rollout。已被 ECCV 2026 接收。
 
 - 项目页：**[Driver-WM]({{ '/driver-wm/' | relative_url }})**
 

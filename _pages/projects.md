@@ -10,8 +10,8 @@ nav: main
 <a id="vla-world-models"></a>
 Focus: video-language(-action) + world-model rollout for safety-critical reasoning.
 
-## Driver-WM
-Traffic-conditioned latent world model for in-cabin driver dynamics rollout.
+## Driver-WM <span class="paper-badge">ECCV 2026</span>
+Traffic-conditioned latent world model for in-cabin driver dynamics rollout. Accepted by ECCV 2026.
 
 - Project page: **[Driver-WM]({{ '/driver-wm/' | relative_url }})**
 

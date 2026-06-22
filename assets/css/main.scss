@@ -26,6 +26,13 @@
   pointer-events: none;
   background: linear-gradient(135deg, rgba(255, 190, 82, 0.18), rgba(52, 71, 124, 0.12) 48%, transparent 72%);
 }
+.card--highlight-blue {
+  border: 1px solid rgba(66, 153, 225, 0.78);
+  box-shadow: 0 16px 36px rgba(66, 153, 225, 0.18), 0 10px 26px rgba(0,0,0,.22);
+}
+.card--highlight-blue::before {
+  background: linear-gradient(135deg, rgba(66, 153, 225, 0.18), rgba(52, 71, 124, 0.13) 48%, transparent 72%);
+}
 .card .card-body { padding: 1rem 1rem 1.1rem 1rem; }
 .card .card-title { margin: 0.1rem 0 0.35rem 0; font-size: 1.05rem; font-weight: 700; }
 .card .card-text { margin: 0; opacity: 0.92; }
@@ -41,6 +48,9 @@
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+.paper-badge--blue {
+  background: linear-gradient(135deg, #4299e1, #d9ecff);
 }
 .news-panel {
   border-left: 4px solid #ffbe52;

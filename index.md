@@ -82,7 +82,7 @@ excerpt: >
 ## 🔥 News
 <div class="news-panel" markdown="1">
 - **2026.06:** 🎉🎉 Our **Driver-WM** paper has been accepted by **ECCV 2026**. Cheers!
-- **2026.01:** 🎉🎉 Our **R2SE** paper has been accepted by **T-PAMI**. Cheers!
+- **2025.03:** 🎉🎉 Our **VLM-DM** paper has been accepted by **IEEE IV**. Cheers!
 </div>
 
 ### Academic × Industry positioning (2026–)
@@ -96,11 +96,11 @@ excerpt: >
 ## Featured Projects
 <div class="card-grid">
 
-  <div class="card">
+  <div class="card card--highlight card--highlight-blue">
     <a href="{{ '/projects/vlm-dm/' | relative_url }}"><img src="{{ '/assets/images/card_vlmdm.jpg' | relative_url }}" alt="VLM-DM" /></a>
     <div class="card-body">
-      <div class="card-title">VLM-DM (IEEE IV 2025)</div>
-      <p class="card-text">Unified VLM for multitask driver monitoring with LoRA (distraction / emotion / drowsiness).</p>
+      <div class="card-title">VLM-DM <span class="paper-badge paper-badge--blue">IEEE IV 2025</span></div>
+      <p class="card-text">Unified VLM for multitask driver monitoring with LoRA (distraction / emotion / drowsiness). Accepted by IEEE IV 2025.</p>
       <p><a class="btn btn--primary" href="{{ '/projects/vlm-dm/' | relative_url }}">Project page</a></p>
     </div>
   </div>

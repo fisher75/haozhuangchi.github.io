@@ -61,7 +61,7 @@ excerpt: >
 ## 🔥 News
 <div class="news-panel" markdown="1">
 - **2026.06：** 🎉🎉 我们的 **Driver-WM** 论文被 **ECCV 2026** 接收！
-- **2026.01：** 🎉🎉 我们的 **R2SE** 论文被 **T-PAMI** 接收！
+- **2025.03：** 🎉🎉 我们的 **VLM-DM** 论文被 **IEEE IV** 接收！
 </div>
 
 ---
@@ -69,11 +69,11 @@ excerpt: >
 ## 代表项目
 <div class="card-grid">
 
-  <div class="card">
+  <div class="card card--highlight card--highlight-blue">
     <a href="{{ '/zh/projects/vlm-dm/' | relative_url }}"><img src="{{ '/assets/images/card_vlmdm.jpg' | relative_url }}" alt="VLM-DM" /></a>
     <div class="card-body">
-      <div class="card-title">VLM-DM（IEEE IV 2025）</div>
-      <p class="card-text">统一视觉语言模型实现多任务驾驶员监测（分心/情绪/疲劳），支持 LoRA 参数高效微调。</p>
+      <div class="card-title">VLM-DM <span class="paper-badge paper-badge--blue">IEEE IV 2025</span></div>
+      <p class="card-text">统一视觉语言模型实现多任务驾驶员监测（分心/情绪/疲劳），支持 LoRA 参数高效微调。已被 IEEE IV 2025 接收。</p>
       <p><a class="btn btn--primary" href="{{ '/zh/projects/vlm-dm/' | relative_url }}">项目页</a></p>
     </div>
   </div>
