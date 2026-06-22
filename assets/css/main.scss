@@ -49,6 +49,22 @@
 .card .card-body { padding: 1rem 1rem 1.1rem 1rem; }
 .card .card-title { margin: 0.1rem 0 0.35rem 0; font-size: 1.05rem; font-weight: 700; }
 .card .card-text { margin: 0; opacity: 0.92; }
+.card img {
+  display: block;
+  width: 100%;
+}
+.project-grid {
+  margin: 1.1rem 0 1.6rem;
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.85rem 0 0;
+}
+.project-links .btn {
+  margin: 0;
+}
 .paper-badge {
   display: table;
   vertical-align: middle;
