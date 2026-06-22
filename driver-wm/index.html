@@ -157,6 +157,68 @@
       max-width: 220px;
     }
 
+    .conference-card {
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f7fd 100%);
+      border: 1px solid #d8e6f4;
+      border-radius: 16px;
+      box-shadow: 0 14px 34px rgba(52, 71, 124, 0.11);
+      display: flex;
+      gap: 1.15rem;
+      justify-content: space-between;
+      margin: 1rem auto 1.25rem;
+      max-width: 780px;
+      padding: 1.05rem 1.25rem;
+      text-align: left;
+    }
+
+    .conference-copy {
+      flex: 1 1 300px;
+      min-width: 0;
+    }
+
+    .conference-kicker {
+      color: var(--driver-orange);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.28rem;
+      text-transform: uppercase;
+    }
+
+    .conference-title {
+      color: var(--driver-blue);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .conference-meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin-top: 0.34rem;
+    }
+
+    .conference-logo-link {
+      display: block;
+      flex: 0 1 300px;
+      max-width: 320px;
+    }
+
+    .conference-logo {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .conference-logo-link:hover,
+    .conference-logo-link:focus {
+      text-decoration: none;
+    }
+
     .teaser {
       font-family: 'Google Sans', sans-serif;
     }
@@ -483,6 +545,17 @@
         max-width: 170px;
       }
 
+      .conference-card {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .conference-logo-link {
+        max-width: 280px;
+        width: 100%;
+      }
+
       .ack-card {
         padding: 1.35rem;
       }
@@ -555,6 +628,17 @@
             <div class="logo-strip" aria-label="Affiliated organizations">
               <img class="logo-ntu" src="./static/images/logos/ntu_logo.png" alt="Nanyang Technological University logo">
               <img class="logo-automan" src="./static/images/logos/automan.png" alt="AutoMan Lab logo">
+            </div>
+
+            <div class="conference-card" aria-label="ECCV 2026 venue">
+              <div class="conference-copy">
+                <div class="conference-kicker">Accepted to ECCV 2026</div>
+                <div class="conference-title">Workshop on Foundation and Generative Models in Biometrics</div>
+                <div class="conference-meta">Malmo, Sweden | September 8-12, 2026</div>
+              </div>
+              <a class="conference-logo-link" href="https://foundgen-bio.github.io/eccv2026/" target="_blank" rel="noopener noreferrer" aria-label="ECCV 2026 workshop website">
+                <img class="conference-logo" src="./static/images/logos/eccv2026-logo.svg" alt="ECCV 2026 logo, Malmo, September 8-12">
+              </a>
             </div>
 
             <div class="publication-links">
