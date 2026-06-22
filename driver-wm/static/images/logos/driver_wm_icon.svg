@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Driver-WM icon: driver-centered traffic-conditioned latent world model for in-cabin dynamics rollout">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#173A6A"/>
+      <stop offset="55%" stop-color="#0D1F3C"/>
+      <stop offset="100%" stop-color="#07111F"/>
+    </radialGradient>
+
+    <linearGradient id="earthBlue" x1="220" y1="150" x2="820" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#35C8FF"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="cabin" x1="220" y1="370" x2="805" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="260" y1="200" x2="860" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="55%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <linearGradient id="traffic" x1="610" y1="240" x2="870" y2="710" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="50%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.85  0 0 0 0 1  0 0 0 0.62 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+
+    <clipPath id="globeClip">
+      <circle cx="512" cy="430" r="270"/>
+    </clipPath>
+
+    <clipPath id="cabinClip">
+      <path d="M223 674 C257 520 339 426 512 426 C685 426 767 520 801 674 L817 756 C824 792 797 826 760 826 H264 C227 826 200 792 207 756 Z"/>
+    </clipPath>
+
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L13 7 L1 13 Z" fill="#22D3EE"/>
+    </marker>
+
+    <marker id="arrowWarm" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L13 7 L1 13 Z" fill="#F97316"/>
+    </marker>
+  </defs>
+
+  <!-- Rounded icon background -->
+  <rect x="64" y="64" width="896" height="896" rx="196" fill="url(#bg)"/>
+
+  <!-- Latent/world-model orbit rings -->
+  <g opacity="0.95" filter="url(#softGlow)">
+    <ellipse cx="512" cy="430" rx="360" ry="178" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" opacity="0.55" transform="rotate(-18 512 430)"/>
+    <ellipse cx="512" cy="430" rx="332" ry="128" fill="none" stroke="#60A5FA" stroke-width="5" stroke-dasharray="18 18" stroke-linecap="round" opacity="0.52" transform="rotate(24 512 430)"/>
+    <path d="M165 512 C278 324 498 256 703 312 C794 337 863 388 905 455" fill="none" stroke="#22D3EE" stroke-width="9" stroke-linecap="round" stroke-dasharray="1 28" opacity="0.72"/>
+  </g>
+
+  <!-- Earth / world -->
+  <g filter="url(#shadow)">
+    <circle cx="512" cy="430" r="270" fill="url(#earthBlue)" opacity="0.96"/>
+    <g clip-path="url(#globeClip)" opacity="0.88">
+      <path d="M259 402 C312 349 364 361 392 313 C431 244 514 252 560 307 C591 344 648 318 710 362 C773 407 775 487 714 524 C666 553 631 532 590 577 C549 621 480 613 453 557 C428 503 373 523 329 500 C279 474 226 448 259 402Z" fill="#22C55E" opacity="0.86"/>
+      <path d="M610 210 C675 234 723 269 765 325 C727 335 705 360 684 394 C656 438 590 428 585 377 C581 336 548 305 610 210Z" fill="#16A34A" opacity="0.78"/>
+      <path d="M342 587 C389 594 411 620 455 655 C505 696 580 670 602 611 C631 628 656 660 641 712 C580 747 505 759 434 742 C369 727 312 695 270 648 C282 606 304 582 342 587Z" fill="#15803D" opacity="0.76"/>
+      <path d="M745 477 C801 500 829 555 809 609 C779 641 744 669 703 690 C674 649 693 608 735 585 C771 565 765 516 745 477Z" fill="#65A30D" opacity="0.72"/>
+
+      <!-- Globe longitude/latitude mesh -->
+      <ellipse cx="512" cy="430" rx="270" ry="88" fill="none" stroke="#DFFBFF" stroke-width="6" opacity="0.34"/>
+      <ellipse cx="512" cy="430" rx="270" ry="170" fill="none" stroke="#DFFBFF" stroke-width="4" opacity="0.26"/>
+      <path d="M512 160 C438 246 400 340 400 430 C400 520 438 614 512 700" fill="none" stroke="#DFFBFF" stroke-width="5" opacity="0.26"/>
+      <path d="M512 160 C586 246 624 340 624 430 C624 520 586 614 512 700" fill="none" stroke="#DFFBFF" stroke-width="5" opacity="0.26"/>
+      <line x1="242" y1="430" x2="782" y2="430" stroke="#DFFBFF" stroke-width="5" opacity="0.25"/>
+    </g>
+    <circle cx="512" cy="430" r="270" fill="none" stroke="#CFFAFE" stroke-width="10" opacity="0.32"/>
+  </g>
+
+  <!-- External traffic and environment influences -->
+  <g filter="url(#softGlow)">
+    <!-- Warm external route -->
+    <path d="M843 284 C762 326 737 384 731 454 C725 526 690 576 622 613" fill="none" stroke="url(#traffic)" stroke-width="14" stroke-linecap="round" marker-end="url(#arrowWarm)"/>
+    <path d="M164 604 C263 588 319 606 378 650 C429 688 481 704 539 694" fill="none" stroke="#22D3EE" stroke-width="12" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+    <!-- Traffic lights -->
+    <g transform="translate(798 318) rotate(10)">
+      <rect x="-35" y="-72" width="70" height="144" rx="34" fill="#111827" stroke="#E5E7EB" stroke-width="5"/>
+      <circle cx="0" cy="-41" r="18" fill="#EF4444"/>
+      <circle cx="0" cy="0" r="18" fill="#FBBF24"/>
+      <circle cx="0" cy="41" r="18" fill="#22C55E"/>
+    </g>
+
+    <!-- Road condition / traffic nodes -->
+    <g stroke="#F8FAFC" stroke-width="5" opacity="0.96">
+      <path d="M822 602 L900 602" stroke-linecap="round"/>
+      <path d="M834 648 L910 684" stroke-linecap="round"/>
+      <path d="M800 684 L863 745" stroke-linecap="round"/>
+      <circle cx="822" cy="602" r="11" fill="#F97316" stroke="none"/>
+      <circle cx="900" cy="602" r="11" fill="#EF4444" stroke="none"/>
+      <circle cx="834" cy="648" r="11" fill="#FBBF24" stroke="none"/>
+      <circle cx="910" cy="684" r="11" fill="#EF4444" stroke="none"/>
+      <circle cx="800" cy="684" r="11" fill="#22D3EE" stroke="none"/>
+      <circle cx="863" cy="745" r="11" fill="#34D399" stroke="none"/>
+    </g>
+
+    <!-- Weather/wind influence -->
+    <g fill="none" stroke="#C4B5FD" stroke-width="8" stroke-linecap="round" opacity="0.78">
+      <path d="M133 354 C182 329 230 331 278 359"/>
+      <path d="M111 397 C164 381 214 388 260 421"/>
+      <path d="M153 442 C199 430 234 439 264 464"/>
+    </g>
+  </g>
+
+  <!-- In-cabin vehicle body / windshield -->
+  <g filter="url(#shadow)">
+    <path d="M223 674 C257 520 339 426 512 426 C685 426 767 520 801 674 L817 756 C824 792 797 826 760 826 H264 C227 826 200 792 207 756 Z" fill="url(#cabin)" stroke="#E0F2FE" stroke-width="9"/>
+    <path d="M303 642 C328 526 395 475 512 475 C629 475 696 526 721 642 Z" fill="#0EA5E9" opacity="0.22" stroke="#BAE6FD" stroke-width="7"/>
+    <path d="M331 635 C361 548 415 512 512 512 C609 512 663 548 693 635" fill="none" stroke="#67E8F9" stroke-width="8" opacity="0.85" stroke-linecap="round"/>
+  </g>
+
+  <!-- Driver as central agent -->
+  <g filter="url(#shadow)">
+    <circle cx="512" cy="594" r="66" fill="#F8FAFC"/>
+    <path d="M452 740 C462 671 492 642 512 642 C532 642 562 671 572 740 Z" fill="#E0F2FE"/>
+    <path d="M430 746 C447 683 477 652 512 652 C547 652 577 683 594 746 C565 772 459 772 430 746Z" fill="#1D4ED8"/>
+    <path d="M461 585 C474 540 552 536 566 586 C546 566 488 566 461 585Z" fill="#0F172A" opacity="0.9"/>
+    <circle cx="490" cy="598" r="7" fill="#0F172A"/>
+    <circle cx="534" cy="598" r="7" fill="#0F172A"/>
+    <path d="M494 624 C506 633 520 633 532 624" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Steering wheel and cockpit signals -->
+  <g filter="url(#softGlow)">
+    <circle cx="512" cy="748" r="92" fill="none" stroke="#E0F2FE" stroke-width="18" opacity="0.94"/>
+    <path d="M512 748 L512 840" stroke="#E0F2FE" stroke-width="15" stroke-linecap="round" opacity="0.94"/>
+    <path d="M432 748 C462 726 486 718 512 718 C538 718 562 726 592 748" fill="none" stroke="#E0F2FE" stroke-width="14" stroke-linecap="round" opacity="0.94"/>
+    <circle cx="512" cy="748" r="22" fill="#22D3EE"/>
+
+    <!-- Latent rollout dots in cabin -->
+    <path d="M333 716 C403 681 460 684 512 735 C564 786 626 796 706 750" fill="none" stroke="#34D399" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 24" opacity="0.95"/>
+    <path d="M320 768 C385 795 442 802 512 780 C582 758 647 770 719 804" fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 22" opacity="0.82"/>
+  </g>
+
+  <!-- Model label / subtle monogram -->
+  <g opacity="0.95">
+    <text x="512" y="900" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="74" font-weight="800" fill="#E0F2FE" letter-spacing="4">Driver-WM</text>
+    <text x="512" y="935" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#93C5FD" letter-spacing="5">TRAFFIC-CONDITIONED WORLD MODEL</text>
+  </g>
+</svg>
