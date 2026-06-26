@@ -479,6 +479,16 @@
       padding: 1.6rem 1.8rem;
     }
 
+    .media-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .media-card.is-featured {
+      border-color: rgba(52, 71, 124, 0.28);
+      box-shadow: 0 12px 30px rgba(52, 71, 124, 0.08);
+    }
+
     .media-icon {
       align-items: center;
       background: var(--driver-blue);
@@ -509,6 +519,16 @@
       color: var(--muted);
       line-height: 1.55;
       margin-bottom: 0.85rem;
+    }
+
+    .media-outlet {
+      color: var(--driver-orange);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
     }
 
     .footer {
@@ -1022,19 +1042,56 @@
         </div>
       </div>
 
-      <div class="media-card">
-        <span class="media-icon" aria-hidden="true">
-          <i class="fas fa-newspaper"></i>
-        </span>
-        <div class="media-card-content">
-          <div class="media-card-title">Featured by 自动驾驶之心</div>
-          <p class="media-card-text">
-            Driver-WM was covered by 自动驾驶之心, a Chinese media platform focusing on autonomous driving research and industry.
-          </p>
-          <a class="button is-normal is-rounded is-dark" href="https://mp.weixin.qq.com/s/1k6WOQNhVZ5heGqTpVwiBg" target="_blank" rel="noopener noreferrer">
-            <span class="icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
-            <span>Read the Chinese Coverage</span>
-          </a>
+      <div class="media-list">
+        <div class="media-card is-featured">
+          <span class="media-icon" aria-hidden="true">
+            <i class="fas fa-newspaper"></i>
+          </span>
+          <div class="media-card-content">
+            <div class="media-outlet">自动驾驶之心</div>
+            <div class="media-card-title">座舱，也开始卷世界模型。南洋理工一篇Driver-WM解析......</div>
+            <p class="media-card-text">
+              A feature article introducing Driver-WM from the perspective of in-cabin world modeling and driver dynamics rollout.
+            </p>
+            <a class="button is-normal is-rounded is-dark" href="https://mp.weixin.qq.com/s/1k6WOQNhVZ5heGqTpVwiBg" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+              <span>Read Coverage</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <span class="media-icon" aria-hidden="true">
+            <i class="fas fa-newspaper"></i>
+          </span>
+          <div class="media-card-content">
+            <div class="media-outlet">车辆工程研究</div>
+            <div class="media-card-title">【ECCV2026】南洋理工吕辰课题组提出Driver-WM：车外交通驱动舱内驾驶员动态多步推演！</div>
+            <p class="media-card-text">
+              Coverage highlighting Driver-WM's traffic-conditioned latent state design and multi-step in-cabin driver motion prediction.
+            </p>
+            <a class="button is-normal is-rounded is-dark" href="https://mp.weixin.qq.com/s/M77Tj_PFwD_E5EbvGiOAlA?scene=1" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+              <span>Read Coverage</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <span class="media-icon" aria-hidden="true">
+            <i class="fas fa-newspaper"></i>
+          </span>
+          <div class="media-card-content">
+            <div class="media-outlet">智驾具身数据挖掘</div>
+            <div class="media-card-title">(ECCV2026)NTU 吕辰团队Driver-WM：世界模型开始预测驾驶员行为!</div>
+            <p class="media-card-text">
+              Coverage discussing Driver-WM as a step toward predicting human driver behavior within future intelligent vehicle systems.
+            </p>
+            <a class="button is-normal is-rounded is-dark" href="https://mp.weixin.qq.com/s/M8CDjzTH3Ov8b7LZUJqbkg" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+              <span>Read Coverage</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
