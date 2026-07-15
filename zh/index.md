@@ -91,11 +91,11 @@ excerpt: >
         <span>审稿人</span>
       </li>
       <li>
-        <strong>IEEE Intelligent Vehicles Symposium (IV)</strong>
+        <strong><a href="https://ieee-iv.org/" target="_blank" rel="noopener noreferrer">IEEE Intelligent Vehicles Symposium (IV)</a></strong>
         <span>审稿人</span>
       </li>
       <li>
-        <strong>Engineering Applications of Artificial Intelligence (EAAI)</strong>
+        <strong><a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank" rel="noopener noreferrer">Engineering Applications of Artificial Intelligence (EAAI)</a></strong>
         <span>特邀审稿人</span>
       </li>
     </ul>
@@ -148,6 +148,7 @@ excerpt: >
 ---
 
 ## 快速链接
+- **Google Scholar：**[Haozhuang Chi](https://scholar.google.com/citations?user=-leHBjoAAAAJ&hl=zh-CN)
 - **简历（PDF）：** [Haozhuang_Chi_CV.pdf]({{ '/assets/cv/Haozhuang_Chi_CV.pdf' | relative_url }})
 - **IV 2025 论文（PDF）：** [VLM-DM_IV2025.pdf]({{ '/assets/papers/VLM-DM_IV2025.pdf' | relative_url }})
 - **LinkedIn：** https://www.linkedin.com/in/haozhuang-chi
