@@ -85,6 +85,44 @@ excerpt: >
 - **2025.03:** 🎉🎉 Our **VLM-DM** paper has been accepted by **IEEE IV**. Cheers!
 </div>
 
+<div class="profile-detail-grid">
+  <section class="profile-detail-card profile-detail-card--awards" aria-labelledby="awards-heading">
+    <div class="profile-detail-kicker">Recognition</div>
+    <h2 id="awards-heading">Scholarships &amp; Awards</h2>
+    <ul class="profile-detail-list">
+      <li>
+        <strong>Singapore International Graduate Award (SINGA)</strong>
+        <span>Agency for Science, Technology and Research (A*STAR) &amp; Nanyang Technological University</span>
+        <time datetime="2023-01">Jan 2023</time>
+      </li>
+      <li>
+        <strong>NTU Research Scholarship (RSS)</strong>
+        <span>Nanyang Technological University, Singapore</span>
+        <time datetime="2023-01">Jan 2023</time>
+      </li>
+    </ul>
+  </section>
+
+  <section class="profile-detail-card profile-detail-card--service" aria-labelledby="service-heading">
+    <div class="profile-detail-kicker">Peer Review</div>
+    <h2 id="service-heading">Academic Service</h2>
+    <ul class="profile-detail-list profile-detail-list--service">
+      <li>
+        <strong><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9424" target="_blank" rel="noopener noreferrer">IEEE Transactions on Industrial Informatics (TII)</a></strong>
+        <span>Reviewer</span>
+      </li>
+      <li>
+        <strong>IEEE Intelligent Vehicles Symposium (IV)</strong>
+        <span>Reviewer</span>
+      </li>
+      <li>
+        <strong>Engineering Applications of Artificial Intelligence (EAAI)</strong>
+        <span>Invited Reviewer</span>
+      </li>
+    </ul>
+  </section>
+</div>
+
 ### Academic × Industry positioning (2026–)
 - **Academic:** rigorous experiments, publications, interpretability, failure-case analysis  
 - **Industry:** end-to-end pipelines (data → training → eval → demo), robustness, deployment constraints  

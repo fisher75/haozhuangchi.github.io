@@ -64,6 +64,44 @@ excerpt: >
 - **2025.03：** 🎉🎉 我们的 **VLM-DM** 论文被 **IEEE IV** 接收！
 </div>
 
+<div class="profile-detail-grid">
+  <section class="profile-detail-card profile-detail-card--awards" aria-labelledby="awards-heading-zh">
+    <div class="profile-detail-kicker">荣誉奖励</div>
+    <h2 id="awards-heading-zh">奖学金与荣誉</h2>
+    <ul class="profile-detail-list">
+      <li>
+        <strong>新加坡国际研究生奖学金（SINGA）</strong>
+        <span>新加坡科技研究局（A*STAR）与南洋理工大学</span>
+        <time datetime="2023-01">2023 年 1 月</time>
+      </li>
+      <li>
+        <strong>南洋理工大学研究奖学金（NTU Research Scholarship, RSS）</strong>
+        <span>新加坡南洋理工大学</span>
+        <time datetime="2023-01">2023 年 1 月</time>
+      </li>
+    </ul>
+  </section>
+
+  <section class="profile-detail-card profile-detail-card--service" aria-labelledby="service-heading-zh">
+    <div class="profile-detail-kicker">同行评议</div>
+    <h2 id="service-heading-zh">学术服务</h2>
+    <ul class="profile-detail-list profile-detail-list--service">
+      <li>
+        <strong><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9424" target="_blank" rel="noopener noreferrer">IEEE Transactions on Industrial Informatics (TII)</a></strong>
+        <span>审稿人</span>
+      </li>
+      <li>
+        <strong>IEEE Intelligent Vehicles Symposium (IV)</strong>
+        <span>审稿人</span>
+      </li>
+      <li>
+        <strong>Engineering Applications of Artificial Intelligence (EAAI)</strong>
+        <span>特邀审稿人</span>
+      </li>
+    </ul>
+  </section>
+</div>
+
 ---
 
 ## 代表项目

@@ -94,6 +94,108 @@
   margin-bottom: 0;
 }
 
+/* --- Compact profile credentials --- */
+.profile-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.15rem 0 1.4rem;
+}
+.profile-detail-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.15rem 1.2rem 1.2rem;
+  border: 1px solid rgba(31,41,51,0.10);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+.profile-detail-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+.profile-detail-card--awards::before {
+  background: linear-gradient(90deg, #f1a93b, #f7d88b);
+}
+.profile-detail-card--awards {
+  border-color: rgba(216,154,51,0.24);
+  background: linear-gradient(135deg, rgba(247,216,139,0.15), #fff 58%);
+}
+.profile-detail-card--service::before {
+  background: linear-gradient(90deg, #2676bd, #78bce8);
+}
+.profile-detail-card--service {
+  border-color: rgba(38,118,189,0.20);
+  background: linear-gradient(135deg, rgba(120,188,232,0.14), #fff 58%);
+}
+.profile-detail-kicker {
+  margin-bottom: 0.25rem;
+  color: #747c84;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.profile-detail-card h2 {
+  margin: 0 0 0.8rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: 1.05rem;
+}
+.profile-detail-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.profile-detail-list li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0.85rem 1rem;
+}
+.profile-detail-list li:last-child {
+  padding-bottom: 0;
+}
+.profile-detail-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d89a33;
+}
+.profile-detail-list--service li::before {
+  background: #2676bd;
+}
+.profile-detail-list strong,
+.profile-detail-list span,
+.profile-detail-list time {
+  display: block;
+}
+.profile-detail-list strong {
+  line-height: 1.35;
+}
+.profile-detail-list span,
+.profile-detail-list time {
+  margin-top: 0.16rem;
+  color: #747c84;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+.profile-detail-list time {
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .profile-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Logo strip (uniform size & shape) --- */
 .logo-strip {
   display: flex;
