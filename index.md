@@ -11,6 +11,10 @@ header:
       url: /projects/
     - label: "Publications"
       url: /publications/
+    - label: "Google Scholar"
+      url: https://scholar.google.com/citations?user=-leHBjoAAAAJ&hl=zh-CN
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/haozhuang-chi
     # - label: "CV (PDF)"
       # url: /assets/cv/Haozhuang_Chi_CV.pdf
 excerpt: >
@@ -175,7 +179,5 @@ excerpt: >
 ---
 
 ## Quick links
-- **Google Scholar:** [Haozhuang Chi](https://scholar.google.com/citations?user=-leHBjoAAAAJ&hl=zh-CN)
 - **CV (PDF):** [Haozhuang_Chi_CV.pdf]({{ '/assets/cv/Haozhuang_Chi_CV.pdf' | relative_url }})
 - **IV 2025 paper (PDF):** [VLM-DM_IV2025.pdf]({{ '/assets/papers/VLM-DM_IV2025.pdf' | relative_url }})
-- **LinkedIn:** https://www.linkedin.com/in/haozhuang-chi

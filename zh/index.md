@@ -11,6 +11,10 @@ header:
       url: /projects/
     - label: "简历 CV (PDF)"
       url: /assets/cv/Haozhuang_Chi_CV.pdf
+    - label: "Google Scholar"
+      url: https://scholar.google.com/citations?user=-leHBjoAAAAJ&hl=zh-CN
+    - label: "LinkedIn"
+      url: https://www.linkedin.com/in/haozhuang-chi
 excerpt: >
   南洋理工大学博士生，研究自动驾驶与具身智能中的 **多模态 AI / Physical AI**、**世界模型**、**大模型** 与 **VLA**。
 ---
@@ -148,7 +152,5 @@ excerpt: >
 ---
 
 ## 快速链接
-- **Google Scholar：**[Haozhuang Chi](https://scholar.google.com/citations?user=-leHBjoAAAAJ&hl=zh-CN)
 - **简历（PDF）：** [Haozhuang_Chi_CV.pdf]({{ '/assets/cv/Haozhuang_Chi_CV.pdf' | relative_url }})
 - **IV 2025 论文（PDF）：** [VLM-DM_IV2025.pdf]({{ '/assets/papers/VLM-DM_IV2025.pdf' | relative_url }})
-- **LinkedIn：** https://www.linkedin.com/in/haozhuang-chi
