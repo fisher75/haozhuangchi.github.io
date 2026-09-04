@@ -230,6 +230,116 @@
       text-decoration: none;
     }
 
+    .invited-presentation {
+      padding-top: 0.25rem;
+      padding-bottom: 3rem;
+    }
+
+    .invited-card {
+      align-items: center;
+      background:
+        radial-gradient(circle at 92% 10%, rgba(74, 184, 226, 0.24), transparent 30%),
+        linear-gradient(125deg, #102542 0%, #173a66 62%, #15506b 100%);
+      border: 1px solid rgba(151, 211, 239, 0.28);
+      border-radius: 16px;
+      box-shadow: 0 16px 36px rgba(16, 37, 66, 0.16);
+      color: var(--white);
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      overflow: hidden;
+      padding: 1.25rem 1.45rem;
+      position: relative;
+    }
+
+    .invited-mark {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      color: #a9dcf4;
+      display: flex;
+      flex: 0 0 auto;
+      font-family: 'Castoro', serif;
+      font-size: 2.35rem;
+      height: 4.4rem;
+      justify-content: center;
+      line-height: 1;
+      width: 4.4rem;
+    }
+
+    .invited-copy {
+      min-width: 0;
+      text-align: left;
+    }
+
+    .invited-kicker {
+      color: #9fdcf6;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      margin-bottom: 0.15rem;
+      text-transform: uppercase;
+    }
+
+    .invited-title {
+      color: var(--white);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.34rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .invited-subtitle {
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.93rem;
+      line-height: 1.35;
+      margin: 0.15rem 0 0.55rem;
+    }
+
+    .invited-meta {
+      align-items: center;
+      color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 0.86rem;
+      gap: 0.4rem 1rem;
+    }
+
+    .invited-meta span {
+      align-items: center;
+      display: inline-flex;
+      gap: 0.38rem;
+    }
+
+    .invited-card .invited-link {
+      background: var(--white);
+      border-color: var(--white);
+      color: var(--driver-blue);
+      flex: 0 0 auto;
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    .invited-card .invited-link:hover,
+    .invited-card .invited-link:focus {
+      background: #eaf6fc;
+      border-color: #eaf6fc;
+      color: #1c3158;
+      text-decoration: none;
+    }
+
+    .invited-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin: 0.75rem auto 0;
+      max-width: 860px;
+      text-align: center;
+    }
+
     .teaser {
       font-family: 'Google Sans', sans-serif;
     }
@@ -393,6 +503,10 @@
 
     .figure-card {
       height: 100%;
+    }
+
+    .results-figure-grid {
+      margin-top: 1.25rem;
     }
 
     .figure-title {
@@ -624,9 +738,36 @@
         text-align: center;
       }
 
+      .conference-copy {
+        flex-basis: auto;
+      }
+
       .conference-logo-link {
+        flex-basis: auto;
         max-width: 280px;
         width: 100%;
+      }
+
+      .invited-presentation {
+        padding-top: 0;
+        padding-bottom: 2.2rem;
+      }
+
+      .invited-card {
+        gap: 0.85rem;
+        grid-template-columns: auto minmax(0, 1fr);
+        padding: 1.1rem;
+      }
+
+      .invited-mark {
+        font-size: 1.9rem;
+        height: 3.5rem;
+        width: 3.5rem;
+      }
+
+      .invited-card .invited-link {
+        grid-column: 1 / -1;
+        justify-self: stretch;
       }
 
       .ack-card {
@@ -697,12 +838,12 @@
               <span class="affiliation-block"><sup>3</sup>Osaka University</span>
             </div>
 
-            <div class="logo-strip" aria-label="Affiliated organizations">
+            <div class="logo-strip" role="group" aria-label="Affiliated organizations">
               <img class="logo-ntu" src="./static/images/logos/ntu_logo.png" alt="Nanyang Technological University logo">
               <img class="logo-automan" src="./static/images/logos/automan.png" alt="AutoMan Lab logo">
             </div>
 
-            <div class="conference-card" aria-label="ECCV 2026 venue">
+            <div class="conference-card" role="group" aria-label="ECCV 2026 venue">
               <div class="conference-copy">
                 <div class="conference-kicker">Accepted to ECCV 2026 Main Conference</div>
                 <div class="conference-title">European Conference on Computer Vision (ECCV) 2026</div>
@@ -750,6 +891,12 @@
                   <span>Coverage</span>
                 </a>
               </span>
+              <span class="link-block">
+                <a href="#invited-presentation" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-person-chalkboard"></i></span>
+                  <span>Invited Poster</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -761,13 +908,38 @@
     <div class="container is-max-widescreen">
       <div class="hero-body">
         <div class="media-frame is-borderless">
-          <video class="teaser-video" src="./static/videos/teaser.mp4" poster="./static/images/figures/teaser.png" autoplay loop muted playsinline></video>
+          <img class="teaser-video" src="./static/images/figures/teaser.png" alt="Driver-WM overview contrasting recognition-only baselines with traffic-conditioned in-cabin dynamics rollout">
         </div>
         <h2 class="subtitle has-text-centered caption">
           Driver-WM moves beyond recognition-only driver monitoring and scene-centric world models by rolling out future in-cabin driver dynamics conditioned on synchronized out-cabin traffic observations.
           The page highlights controlled interventions where external traffic context is removed, swapped, or gated to probe how driver motion changes over the prediction horizon.
         </h2>
       </div>
+    </div>
+  </section>
+
+  <section class="section invited-presentation" id="invited-presentation">
+    <div class="container is-max-desktop">
+      <div class="invited-card">
+        <div class="invited-mark" aria-hidden="true">&infin;</div>
+        <div class="invited-copy">
+          <div class="invited-kicker">Invited Poster Presentation &middot; Non-archival Nectar Track</div>
+          <h2 class="invited-title">World Models in the L&infin;p</h2>
+          <p class="invited-subtitle">Towards Application-Driven World Model Evaluation</p>
+          <div class="invited-meta">
+            <span><i class="fas fa-calendar-day" aria-hidden="true"></i>Tuesday, September 8, 2026</span>
+            <span><i class="fas fa-clock" aria-hidden="true"></i>15:10&ndash;16:10</span>
+            <span><i class="fas fa-location-dot" aria-hidden="true"></i>Malm&ouml; Arena Terassen</span>
+          </div>
+        </div>
+        <a class="button is-normal is-rounded invited-link" href="https://eccv26woop.github.io/" target="_blank" rel="noopener noreferrer">
+          <span>Workshop Details</span>
+          <span class="icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+      <p class="invited-note">
+        Driver-WM will be presented in the invited poster session, connecting its controlled-intervention analysis with discussion on controllability, physical plausibility, and downstream world-model evaluation.
+      </p>
     </div>
   </section>
 
@@ -980,7 +1152,7 @@
         </p>
       </div>
 
-      <div class="columns is-multiline is-variable is-5" style="margin-top: 1.25rem;">
+      <div class="columns is-multiline is-variable is-5 results-figure-grid">
         <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
           <div class="figure-card">
             <div class="media-frame">
