@@ -46,6 +46,22 @@
   pointer-events: none;
   background: linear-gradient(135deg, rgba(66, 153, 225, 0.18), rgba(52, 71, 124, 0.13) 48%, transparent 72%);
 }
+.card--highlight-pv {
+  position: relative;
+  border: 1px solid rgba(91, 116, 222, 0.74);
+  box-shadow: 0 16px 36px rgba(36, 119, 212, 0.16), 0 10px 26px rgba(0,0,0,.22);
+}
+.card--highlight-pv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(36, 119, 212, 0.16), rgba(114, 88, 222, 0.12) 52%, rgba(238, 101, 37, 0.06));
+}
+.card--highlight-pv .card-body {
+  position: relative;
+  z-index: 1;
+}
 .card .card-body { padding: 1rem 1rem 1.1rem 1rem; }
 .card .card-title { margin: 0.1rem 0 0.35rem 0; font-size: 1.05rem; font-weight: 700; }
 .card .card-text { margin: 0; opacity: 0.92; }
@@ -82,6 +98,10 @@
 .paper-badge--blue {
   background: linear-gradient(135deg, #4299e1, #d9ecff);
   box-shadow: 0 8px 18px rgba(66, 153, 225, 0.24);
+}
+.paper-badge--pv {
+  background: linear-gradient(135deg, #4aaee8, #dad8ff);
+  box-shadow: 0 8px 18px rgba(91, 116, 222, 0.22);
 }
 .news-panel {
   border-left: 4px solid #ffbe52;

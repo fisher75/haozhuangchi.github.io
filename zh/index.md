@@ -138,6 +138,15 @@ excerpt: >
     </div>
   </div>
 
+  <div class="card card--highlight-pv">
+    <a href="{{ '/pv-wm/' | relative_url }}"><img src="{{ '/assets/images/card_pvwm.png' | relative_url }}" alt="PV-WM" /></a>
+    <div class="card-body">
+      <div class="card-title">PV-WM <span class="paper-badge paper-badge--pv">arXiv 2026</span></div>
+      <p class="card-text">面向关节行人与刚体车辆协同推演的异构微观—宏观世界模型，并同步建模交互几何关系。</p>
+      <p><a class="btn btn--primary" href="{{ '/pv-wm/' | relative_url }}">项目页</a></p>
+    </div>
+  </div>
+
   <div class="card">
     <a href="{{ '/zh/projects/' | relative_url }}"><img src="{{ '/assets/images/card_auttc.jpg' | relative_url }}" alt="AU-TTC" /></a>
     <div class="card-body">

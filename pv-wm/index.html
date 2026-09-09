@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PV-WM is a heterogeneous micro-macro world model for articulated pedestrian-vehicle co-rollout.">
+  <meta name="keywords" content="PV-WM, world model, pedestrian forecasting, vehicle forecasting, articulated motion, autonomous driving">
+  <meta name="theme-color" content="#102d52">
+
+  <meta property="og:title" content="PV-WM">
+  <meta property="og:description" content="A heterogeneous micro-macro world model for articulated pedestrian-vehicle co-rollout.">
+  <meta property="og:image" content="https://fisher75.github.io/haozhuangchi.github.io/assets/images/card_pvwm.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fisher75.github.io/haozhuangchi.github.io/pv-wm/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://fisher75.github.io/haozhuangchi.github.io/assets/images/card_pvwm.png">
+
+  <title>PV-WM | Pedestrian-Vehicle World Modeling</title>
+
+  <link rel="canonical" href="https://fisher75.github.io/haozhuangchi.github.io/pv-wm/">
+  <link rel="icon" type="image/svg+xml" href="./static/images/logos/pvwm-icon.svg">
+  <link rel="shortcut icon" type="image/png" href="./static/images/logos/pvwm-icon.png">
+  <link rel="apple-touch-icon" href="./static/images/logos/pvwm-icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans:400,500,700|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    :root {
+      --pv-navy: #102d52;
+      --pv-navy-deep: #08182c;
+      --pv-blue: #2477d4;
+      --pv-cyan: #1eaedb;
+      --pv-orange: #ee6525;
+      --pv-violet: #7258de;
+      --pv-ink: #172334;
+      --pv-muted: #586474;
+      --pv-rule: #dce4ed;
+      --pv-panel: #f3f7fb;
+      --pv-white: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--pv-white);
+      color: var(--pv-ink);
+      font-family: 'Noto Sans', sans-serif;
+      margin: 0;
+    }
+
+    a {
+      color: var(--pv-blue);
+    }
+
+    a:hover {
+      color: #155cae;
+      text-decoration: underline;
+    }
+
+    .publication-title,
+    .publication-authors,
+    .publication-affiliations,
+    .publication-links,
+    .section-title,
+    .eyebrow,
+    .idea-title,
+    .metric-value,
+    .metric-label,
+    .figure-title,
+    .benchmark-title,
+    .copy-button {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    .publication-header {
+      background:
+        radial-gradient(circle at 8% 16%, rgba(30, 174, 219, 0.1), transparent 25%),
+        radial-gradient(circle at 93% 12%, rgba(238, 101, 37, 0.09), transparent 22%),
+        linear-gradient(180deg, #fbfdff 0%, #fff 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .publication-header::before {
+      background-image:
+        linear-gradient(rgba(36, 119, 212, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36, 119, 212, 0.045) 1px, transparent 1px);
+      background-size: 42px 42px;
+      content: '';
+      inset: 0;
+      mask-image: linear-gradient(to bottom, #000, transparent 78%);
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .publication-header .hero-body {
+      padding: 2rem 1.5rem 2.5rem;
+      position: relative;
+    }
+
+    .project-home {
+      align-items: center;
+      color: var(--pv-muted);
+      display: inline-flex;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.9rem;
+      gap: 0.45rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .project-home:hover {
+      color: var(--pv-blue);
+      text-decoration: none;
+    }
+
+    .title-lockup {
+      align-items: center;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      max-width: 1180px;
+    }
+
+    .project-logo {
+      display: block;
+      flex: 0 0 auto;
+      height: 96px;
+      width: 96px;
+    }
+
+    .publication-title {
+      color: #101820;
+      font-size: 2.48rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.22;
+      margin: 0;
+      max-width: 1000px;
+      text-align: left;
+    }
+
+    .publication-authors {
+      font-size: 1.18rem;
+      line-height: 1.8;
+      margin-bottom: 0.35rem;
+      text-align: center;
+    }
+
+    .author-block,
+    .affiliation-block,
+    .link-block {
+      display: inline-block;
+    }
+
+    .author-block {
+      margin: 0 0.18rem;
+    }
+
+    .publication-affiliations {
+      color: var(--pv-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .affiliation-block {
+      margin: 0 0.55rem;
+    }
+
+    .institution-strip {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      justify-content: center;
+      margin: 1.15rem auto 0.95rem;
+    }
+
+    .institution-chip {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--pv-rule);
+      border-radius: 999px;
+      color: var(--pv-navy);
+      display: inline-flex;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      gap: 0.45rem;
+      padding: 0.46rem 0.78rem;
+    }
+
+    .institution-chip:hover {
+      border-color: #adc9e8;
+      color: var(--pv-blue);
+      text-decoration: none;
+    }
+
+    .publication-links {
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    .link-block {
+      margin: 0.25rem 0.14rem;
+    }
+
+    .button.is-pv {
+      background: var(--pv-navy-deep);
+      border-color: var(--pv-navy-deep);
+      color: var(--pv-white);
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .button.is-pv:hover,
+    .button.is-pv:focus {
+      background: var(--pv-blue);
+      border-color: var(--pv-blue);
+      color: var(--pv-white);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .button.is-pv.is-coming-soon {
+      background: #526070;
+      border-color: #526070;
+      cursor: default;
+      opacity: 0.82;
+    }
+
+    .section {
+      padding: 3.25rem 1.5rem;
+    }
+
+    .teaser-section {
+      padding-bottom: 2.4rem;
+      padding-top: 1.2rem;
+    }
+
+    .figure-shell {
+      background: var(--pv-white);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .figure-link {
+      display: block;
+    }
+
+    .figure-link:hover {
+      text-decoration: none;
+    }
+
+    .figure-link picture {
+      display: block;
+    }
+
+    .paper-image {
+      display: block;
+      height: auto;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .caption {
+      color: var(--pv-muted);
+      font-size: 0.98rem;
+      line-height: 1.62;
+      margin: 0.9rem auto 0;
+      max-width: 980px;
+      text-align: center;
+    }
+
+    .section-heading {
+      margin-bottom: 1.65rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--pv-blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--pv-ink);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .section-lead {
+      color: var(--pv-muted);
+      line-height: 1.6;
+      margin: 0.65rem auto 0;
+      max-width: 760px;
+    }
+
+    .abstract-section {
+      background: linear-gradient(180deg, #f6f9fc 0%, #f1f6fb 100%);
+    }
+
+    .abstract-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--pv-rule);
+      border-radius: 18px;
+      box-shadow: 0 16px 45px rgba(16, 45, 82, 0.07);
+      padding: 2.25rem 2.5rem;
+    }
+
+    .abstract-card p {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .abstract-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .state-legend {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      justify-content: center;
+      margin-top: 1.3rem;
+    }
+
+    .state-pill {
+      align-items: center;
+      background: var(--pv-white);
+      border: 1px solid var(--pv-rule);
+      border-radius: 999px;
+      display: inline-flex;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      gap: 0.4rem;
+      padding: 0.42rem 0.72rem;
+    }
+
+    .state-pill.is-pedestrian {
+      color: var(--pv-blue);
+    }
+
+    .state-pill.is-vehicle {
+      color: var(--pv-orange);
+    }
+
+    .state-pill.is-relation {
+      color: var(--pv-violet);
+    }
+
+    .idea-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .idea-card {
+      background: var(--pv-white);
+      border: 1px solid var(--pv-rule);
+      border-radius: 15px;
+      min-height: 100%;
+      padding: 1.4rem;
+      position: relative;
+    }
+
+    .idea-card::before {
+      background: var(--accent, var(--pv-blue));
+      border-radius: 15px 15px 0 0;
+      content: '';
+      height: 4px;
+      inset: -1px -1px auto;
+      position: absolute;
+    }
+
+    .idea-icon {
+      align-items: center;
+      background: color-mix(in srgb, var(--accent, var(--pv-blue)) 12%, white);
+      border-radius: 12px;
+      color: var(--accent, var(--pv-blue));
+      display: inline-flex;
+      font-size: 1.2rem;
+      height: 2.65rem;
+      justify-content: center;
+      margin-bottom: 0.85rem;
+      width: 2.65rem;
+    }
+
+    .idea-title {
+      color: var(--pv-ink);
+      font-size: 1.03rem;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .idea-text {
+      color: var(--pv-muted);
+      font-size: 0.92rem;
+      line-height: 1.58;
+    }
+
+    .architecture-section {
+      background:
+        radial-gradient(circle at 10% 50%, rgba(36, 119, 212, 0.06), transparent 25%),
+        radial-gradient(circle at 90% 45%, rgba(114, 88, 222, 0.055), transparent 24%);
+    }
+
+    .architecture-frame,
+    .qualitative-frame {
+      border: 1px solid var(--pv-rule);
+      border-radius: 16px;
+      box-shadow: 0 14px 38px rgba(16, 45, 82, 0.08);
+      overflow: hidden;
+    }
+
+    .zoom-hint {
+      align-items: center;
+      color: var(--pv-blue);
+      display: inline-flex;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.86rem;
+      gap: 0.35rem;
+      margin-top: 0.75rem;
+    }
+
+    .benchmark-panel {
+      background: linear-gradient(135deg, var(--pv-navy-deep), #163e6f 60%, #185d78);
+      border-radius: 18px;
+      box-shadow: 0 18px 42px rgba(8, 24, 44, 0.16);
+      color: var(--pv-white);
+      margin-bottom: 1.25rem;
+      padding: 1.6rem 1.75rem;
+    }
+
+    .benchmark-title {
+      color: var(--pv-white);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .benchmark-text {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.93rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .metric-group {
+      margin-top: 1.75rem;
+    }
+
+    .metric-group-title {
+      align-items: center;
+      color: var(--pv-ink);
+      display: flex;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .metric-group-title::after {
+      background: var(--pv-rule);
+      content: '';
+      flex: 1 1 auto;
+      height: 1px;
+    }
+
+    .metric-grid {
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .metric-grid.is-three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .metric-grid.is-two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metric-card {
+      background: var(--pv-white);
+      border: 1px solid var(--pv-rule);
+      border-radius: 14px;
+      padding: 1.15rem;
+      text-align: center;
+    }
+
+    .metric-value {
+      color: var(--metric-color, var(--pv-blue));
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      color: var(--pv-ink);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-top: 0.35rem;
+    }
+
+    .metric-context {
+      color: var(--pv-muted);
+      font-size: 0.78rem;
+      line-height: 1.4;
+      margin-top: 0.25rem;
+    }
+
+    .qualitative-section {
+      background: var(--pv-panel);
+    }
+
+    .figure-title {
+      color: var(--pv-ink);
+      font-size: 1.06rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .intervention-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .intervention-card {
+      background: linear-gradient(180deg, #fff 0%, #fafbfe 100%);
+      border: 1px solid var(--pv-rule);
+      border-radius: 14px;
+      padding: 1.3rem;
+    }
+
+    .intervention-index {
+      color: var(--pv-violet);
+      font-family: 'Castoro', serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .intervention-card strong {
+      color: var(--pv-ink);
+      display: block;
+      font-family: 'Google Sans', sans-serif;
+      margin-bottom: 0.35rem;
+    }
+
+    .intervention-card p {
+      color: var(--pv-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .intervention-delta {
+      color: var(--pv-violet);
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 0.7rem;
+    }
+
+    .bibtex-wrap {
+      position: relative;
+    }
+
+    .bibtex-block {
+      background: #111d2d;
+      border-radius: 14px;
+      color: #e8f0fa;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.88rem;
+      line-height: 1.52;
+      margin: 0;
+      overflow-x: auto;
+      padding: 1.5rem;
+      white-space: pre;
+    }
+
+    .copy-button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      color: var(--pv-white);
+      cursor: pointer;
+      font-size: 0.82rem;
+      padding: 0.42rem 0.72rem;
+      position: absolute;
+      right: 0.8rem;
+      top: 0.8rem;
+    }
+
+    .copy-button:hover,
+    .copy-button:focus {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .ack-card {
+      align-items: center;
+      background: linear-gradient(135deg, #f5f8fc 0%, #eef5fa 100%);
+      border: 1px solid var(--pv-rule);
+      border-radius: 16px;
+      display: flex;
+      gap: 1rem;
+      padding: 1.35rem 1.5rem;
+    }
+
+    .ack-icon {
+      align-items: center;
+      background: var(--pv-white);
+      border-radius: 13px;
+      color: var(--pv-blue);
+      display: flex;
+      flex: 0 0 auto;
+      font-size: 1.3rem;
+      height: 3.2rem;
+      justify-content: center;
+      width: 3.2rem;
+    }
+
+    .ack-card p {
+      color: var(--pv-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .footer {
+      background: var(--pv-navy-deep);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 2rem 1.5rem;
+    }
+
+    .footer a {
+      color: #9bdcf5;
+    }
+
+    .footer .content {
+      font-size: 0.86rem;
+      margin: 0;
+    }
+
+    .reveal {
+      animation: rise-in 560ms ease both;
+    }
+
+    .reveal-delay-1 {
+      animation-delay: 90ms;
+    }
+
+    .reveal-delay-2 {
+      animation-delay: 170ms;
+    }
+
+    @keyframes rise-in {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 1023px) {
+      .publication-title {
+        font-size: 2.05rem;
+      }
+
+      .idea-grid,
+      .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .publication-header .hero-body {
+        padding: 1.3rem 1.1rem 2rem;
+      }
+
+      .project-home {
+        margin-bottom: 1.25rem;
+      }
+
+      .title-lockup {
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .project-logo {
+        height: 68px;
+        width: 68px;
+      }
+
+      .publication-title {
+        font-size: 1.55rem;
+        line-height: 1.25;
+      }
+
+      .publication-authors {
+        font-size: 1rem;
+      }
+
+      .publication-affiliations {
+        font-size: 0.88rem;
+      }
+
+      .institution-strip {
+        margin-top: 0.9rem;
+      }
+
+      .section {
+        padding: 2.35rem 1.1rem;
+      }
+
+      .teaser-section {
+        padding-top: 0.8rem;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+
+      .abstract-card {
+        padding: 1.35rem;
+      }
+
+      .abstract-card p {
+        font-size: 0.95rem;
+        text-align: left;
+      }
+
+      .idea-grid,
+      .metric-grid,
+      .metric-grid.is-three,
+      .metric-grid.is-two,
+      .intervention-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .idea-card {
+        padding: 1.2rem;
+      }
+
+      .benchmark-panel {
+        padding: 1.3rem;
+      }
+
+      .ack-card {
+        align-items: flex-start;
+      }
+
+      .bibtex-block {
+        font-size: 0.76rem;
+        padding: 3.4rem 1rem 1rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .title-lockup {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .publication-title {
+        text-align: center;
+      }
+
+      .project-logo {
+        height: 74px;
+        width: 74px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal,
+      .reveal-delay-1,
+      .reveal-delay-2 {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero publication-header">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <a class="project-home" href="../">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          <span>Haozhuang Chi</span>
+        </a>
+
+        <div class="title-lockup reveal">
+          <img class="project-logo" src="./static/images/logos/pvwm-icon.svg" width="256" height="256" alt="PV-WM project logo">
+          <h1 class="publication-title">
+            PV-WM: A Heterogeneous Micro-Macro World Model for Articulated Pedestrian-Vehicle Co-Rollout
+          </h1>
+        </div>
+
+        <div class="publication-authors reveal reveal-delay-1">
+          <span class="author-block"><a href="https://scholar.google.com/citations?user=-leHBjoAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Haozhuang Chi</a><sup>1</sup>,</span>
+          <span class="author-block">Jingsong Liang<sup>1</sup>,</span>
+          <span class="author-block">Ziying Song<sup>1</sup>,</span>
+          <span class="author-block">Lei Yang<sup>1</sup>,</span>
+          <span class="author-block">Shihao Li<sup>2</sup>,</span>
+          <span class="author-block">Haoruo Zhang<sup>1</sup>,</span>
+          <span class="author-block"><a href="https://scholar.google.com/citations?user=UKVs2CEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Chen Lv</a><sup>1,&dagger;</sup></span>
+        </div>
+
+        <div class="publication-affiliations reveal reveal-delay-1">
+          <span class="affiliation-block"><sup>1</sup>Nanyang Technological University, Singapore</span>
+          <span class="affiliation-block"><sup>2</sup>Beijing Institute of Technology, China</span>
+        </div>
+
+        <div class="institution-strip reveal reveal-delay-2">
+          <a class="institution-chip" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-building-columns" aria-hidden="true"></i>
+            <span>NTU Singapore</span>
+          </a>
+          <a class="institution-chip" href="https://english.bit.edu.cn/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-building-columns" aria-hidden="true"></i>
+            <span>Beijing Institute of Technology</span>
+          </a>
+        </div>
+
+        <div class="publication-links reveal reveal-delay-2">
+          <span class="link-block">
+            <a class="button is-normal is-rounded is-pv" href="https://arxiv.org/pdf/2609.07328" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper (PDF)</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a class="button is-normal is-rounded is-pv" href="https://arxiv.org/abs/2609.07328" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <span class="button is-normal is-rounded is-pv is-coming-soon" aria-disabled="true">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code Coming Soon</span>
+            </span>
+          </span>
+          <span class="link-block">
+            <a class="button is-normal is-rounded is-pv" href="#results">
+              <span class="icon"><i class="fas fa-chart-line"></i></span>
+              <span>Results</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a class="button is-normal is-rounded is-pv" href="#bibtex">
+              <span class="icon"><i class="fas fa-quote-right"></i></span>
+              <span>BibTeX</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section teaser-section" id="teaser">
+    <div class="container is-max-widescreen">
+      <div class="figure-shell">
+        <a class="figure-link" href="./static/images/figures/teaser.png" target="_blank" rel="noopener noreferrer" aria-label="Open the PV-WM teaser at full resolution">
+          <picture>
+            <source srcset="./static/images/figures/teaser.webp" type="image/webp">
+            <img class="paper-image" src="./static/images/figures/teaser.png" width="2804" height="899" alt="PV-WM advances structured pedestrian, vehicle, and pedestrian-vehicle relation states from observation history into a generated future">
+          </picture>
+        </a>
+      </div>
+      <p class="caption">
+        PV-WM bridges macro agent forecasting and articulated pedestrian prediction. From structured observation histories, it jointly rolls out pedestrian root motion, 15-joint articulation, rigid-vehicle states, oriented boxes, and synchronized pedestrian-vehicle relations.
+      </p>
+    </div>
+  </section>
+
+  <section class="section abstract-section" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="section-heading">
+        <div class="eyebrow">Overview</div>
+        <h2 class="section-title">Abstract</h2>
+      </div>
+
+      <div class="abstract-card">
+        <p>
+          Local pedestrian-vehicle forecasting spans heterogeneous physical scales: pedestrians combine root locomotion with articulated motion, whereas vehicles are rigid bodies described by kinematic state and oriented extent. Existing road-agent forecasters typically omit pedestrian articulation, while pose forecasters leave vehicle futures outside the learned rollout. We introduce <strong>PV-WM</strong>, a history-only world model over structured post-perception tracks.
+        </p>
+        <p>
+          PV-WM recurrently advances pedestrian root motion, 15-joint articulation, and learned vehicle states within a synchronized heterogeneous state. Generated pedestrian and vehicle chunks form the next recurrent boundary; vehicle boxes are reconstructed from predicted center and heading with observed extent, and pedestrian-vehicle geometry is recomputed after every transition. Evaluations on aligned Waymo contexts show improved pedestrian, interaction-geometry, and efficiency measures over matched complete-state alternatives, while feedback interventions verify that later transitions reuse generated articulation.
+        </p>
+      </div>
+
+      <div class="state-legend" role="group" aria-label="PV-WM heterogeneous state components">
+        <span class="state-pill is-pedestrian"><i class="fas fa-person-walking" aria-hidden="true"></i>Pedestrian articulation</span>
+        <span class="state-pill is-vehicle"><i class="fas fa-car-side" aria-hidden="true"></i>Vehicle kinematics</span>
+        <span class="state-pill is-relation"><i class="fas fa-share-nodes" aria-hidden="true"></i>P&ndash;V relations</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ideas">
+    <div class="container is-max-widescreen">
+      <div class="section-heading">
+        <div class="eyebrow">Core Ideas</div>
+        <h2 class="section-title">One World State, Type-Specific Dynamics</h2>
+        <p class="section-lead">A single recurrent model advances heterogeneous agents together without collapsing their distinct physical structure.</p>
+      </div>
+
+      <div class="idea-grid">
+        <article class="idea-card" style="--accent: var(--pv-blue);">
+          <span class="idea-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+          <h3 class="idea-title">Typed Complete State</h3>
+          <p class="idea-text">Pedestrian root and articulation, vehicle state and extent, pair relations, and validity masks remain explicit throughout the rollout.</p>
+        </article>
+
+        <article class="idea-card" style="--accent: var(--pv-cyan);">
+          <span class="idea-icon"><i class="fas fa-rotate" aria-hidden="true"></i></span>
+          <h3 class="idea-title">Generated-State Recurrence</h3>
+          <p class="idea-text">Each generated chunk becomes the next recurrent boundary, allowing later predictions to depend on the model's own evolving world state.</p>
+        </article>
+
+        <article class="idea-card" style="--accent: var(--pv-orange);">
+          <span class="idea-icon"><i class="fas fa-cubes" aria-hidden="true"></i></span>
+          <h3 class="idea-title">Physical Closure</h3>
+          <p class="idea-text">Vehicle boxes are reconstructed from predicted centers and headings, while observed extent preserves rigid-body geometry.</p>
+        </article>
+
+        <article class="idea-card" style="--accent: var(--pv-violet);">
+          <span class="idea-icon"><i class="fas fa-diagram-project" aria-hidden="true"></i></span>
+          <h3 class="idea-title">Relation Refresh</h3>
+          <p class="idea-text">Pedestrian-vehicle geometry is recomputed after every transition so pairwise state stays synchronized with generated agents.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section architecture-section" id="method">
+    <div class="container is-max-widescreen">
+      <div class="section-heading">
+        <div class="eyebrow">Method</div>
+        <h2 class="section-title">Generated-State Micro-Macro Co-Rollout</h2>
+        <p class="section-lead">Typed encoders initialize the world state, recurrent decoders predict heterogeneous futures, and physical closure refreshes the next boundary.</p>
+      </div>
+
+      <div class="architecture-frame">
+        <a class="figure-link" href="./static/images/figures/architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Open the PV-WM architecture at full resolution">
+          <picture>
+            <source srcset="./static/images/figures/architecture.webp" type="image/webp">
+            <img class="paper-image" src="./static/images/figures/architecture.png" width="3108" height="1698" loading="lazy" decoding="async" alt="PV-WM architecture with typed state initialization, recurrent world-model feedback, pedestrian and vehicle decoders, physical closure, and relation recomputation">
+          </picture>
+        </a>
+      </div>
+      <div class="has-text-centered">
+        <span class="zoom-hint"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i>Click the figure for full resolution</span>
+      </div>
+      <p class="caption">
+        PV-WM encodes articulated pedestrians, rigid vehicles, pair relations, and masks into a synchronized typed state. Pedestrian and vehicle readouts predict the next chunk; box reconstruction and relation recomputation then close the state before recurrent feedback.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="results">
+    <div class="container is-max-desktop">
+      <div class="section-heading">
+        <div class="eyebrow">Evaluation</div>
+        <h2 class="section-title">Quantitative Results</h2>
+        <p class="section-lead">Segment-grouped, context-disjoint five-fold evaluation across aligned Waymo scenes.</p>
+      </div>
+
+      <div class="benchmark-panel">
+        <div class="benchmark-title">Evaluation at a glance</div>
+        <p class="benchmark-text">
+          Pedestrian measures use 824 contexts; vehicle and pairwise measures use the 797 contexts with valid future vehicle support. Trainable models are evaluated with three seeds, and system checkpoints are selected using validation splits only.
+        </p>
+      </div>
+
+      <div class="metric-group">
+        <div class="metric-group-title"><span>Recurrent execution vs. matched one-shot predictor</span></div>
+        <div class="metric-grid is-two">
+          <div class="metric-card" style="--metric-color: var(--pv-blue);">
+            <div class="metric-value">12.7% &darr;</div>
+            <div class="metric-label">Root ADE</div>
+            <div class="metric-context">Pedestrian root transport error</div>
+          </div>
+          <div class="metric-card" style="--metric-color: var(--pv-blue);">
+            <div class="metric-value">14.8% &darr;</div>
+            <div class="metric-label">MPJPE</div>
+            <div class="metric-context">Absolute articulated pose error</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metric-group">
+        <div class="metric-group-title"><span>PV-WM vs. validation-selected Modular Specialist</span></div>
+        <div class="metric-grid">
+          <div class="metric-card" style="--metric-color: var(--pv-blue);">
+            <div class="metric-value">5.2% &darr;</div>
+            <div class="metric-label">Root ADE</div>
+            <div class="metric-context">Pedestrian transport</div>
+          </div>
+          <div class="metric-card" style="--metric-color: var(--pv-blue);">
+            <div class="metric-value">7.6% &darr;</div>
+            <div class="metric-label">MPJPE</div>
+            <div class="metric-context">Full-body accuracy</div>
+          </div>
+          <div class="metric-card" style="--metric-color: var(--pv-violet);">
+            <div class="metric-value">11.9% &darr;</div>
+            <div class="metric-label">P&ndash;V Distance Error</div>
+            <div class="metric-context">Pairwise geometry</div>
+          </div>
+          <div class="metric-card" style="--metric-color: var(--pv-violet);">
+            <div class="metric-value">5.8% &darr;</div>
+            <div class="metric-label">Closest-Approach Error</div>
+            <div class="metric-context">Oriented vehicle boxes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metric-group">
+        <div class="metric-group-title"><span>Single-network efficiency vs. Modular Specialist</span></div>
+        <div class="metric-grid is-three">
+          <div class="metric-card" style="--metric-color: var(--pv-orange);">
+            <div class="metric-value">57.1% &darr;</div>
+            <div class="metric-label">Parameters</div>
+            <div class="metric-context">One model instead of two specialists</div>
+          </div>
+          <div class="metric-card" style="--metric-color: var(--pv-orange);">
+            <div class="metric-value">96.5% &darr;</div>
+            <div class="metric-label">Average FLOPs</div>
+            <div class="metric-context">Per local-scene instance</div>
+          </div>
+          <div class="metric-card" style="--metric-color: var(--pv-orange);">
+            <div class="metric-value">25.5% &darr;</div>
+            <div class="metric-label">p95 Latency</div>
+            <div class="metric-context">Measured complete-system execution</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section qualitative-section" id="visualizations">
+    <div class="container is-max-widescreen">
+      <div class="section-heading">
+        <div class="eyebrow">Structured Rollouts</div>
+        <h2 class="section-title">Qualitative Results</h2>
+        <p class="section-lead">Joint pedestrian and vehicle futures in moving-interaction and near-interaction scenes.</p>
+      </div>
+
+      <div class="qualitative-frame">
+        <a class="figure-link" href="./static/images/figures/qualitative.png" target="_blank" rel="noopener noreferrer" aria-label="Open the PV-WM qualitative results at full resolution">
+          <picture>
+            <source srcset="./static/images/figures/qualitative.webp" type="image/webp">
+            <img class="paper-image" src="./static/images/figures/qualitative.png" width="2821" height="1395" loading="lazy" decoding="async" alt="Qualitative PV-WM pedestrian and vehicle co-rollouts at 0.2, 0.6, and 1 second across four interaction scenarios">
+          </picture>
+        </a>
+      </div>
+      <h3 class="figure-title">Coherent micro-macro evolution over the one-second horizon</h3>
+      <p class="caption">
+        Black denotes ground truth, red the selected Modular Specialist, and blue PV-WM. The examples visualize articulated pedestrian motion together with vehicle boxes rather than evaluating either future in isolation.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="interventions">
+    <div class="container is-max-desktop">
+      <div class="section-heading">
+        <div class="eyebrow">Feedback Analysis</div>
+        <h2 class="section-title">Does the Model Reuse Generated Articulation?</h2>
+        <p class="section-lead">Targeted interventions at the recurrent boundary test whether later predictions depend on generated pose content, temporal order, and pedestrian identity.</p>
+      </div>
+
+      <div class="intervention-grid">
+        <article class="intervention-card">
+          <div class="intervention-index">01</div>
+          <strong>Rigidized Feedback</strong>
+          <p>Removing articulated variation tests whether future transitions use pose content rather than root motion alone.</p>
+          <div class="intervention-delta">+33.94 mm wAPE@1s</div>
+        </article>
+        <article class="intervention-card">
+          <div class="intervention-index">02</div>
+          <strong>Temporal Shuffle</strong>
+          <p>Reordering generated articulation tests sensitivity to the temporal structure of the recurrent state.</p>
+          <div class="intervention-delta">+33.66 mm wAPE@1s</div>
+        </article>
+        <article class="intervention-card">
+          <div class="intervention-index">03</div>
+          <strong>Identity Shuffle</strong>
+          <p>Swapping pose feedback across pedestrians tests whether identity-specific articulation drives later predictions.</p>
+          <div class="intervention-delta">+33.63 mm fMPJPE</div>
+        </article>
+      </div>
+      <p class="caption">Positive changes indicate degradation relative to factual feedback, providing functional evidence that recurrent transitions reuse generated articulation.</p>
+    </div>
+  </section>
+
+  <section class="section abstract-section" id="bibtex">
+    <div class="container is-max-desktop">
+      <div class="section-heading">
+        <div class="eyebrow">Citation</div>
+        <h2 class="section-title">BibTeX</h2>
+      </div>
+
+      <div class="bibtex-wrap">
+        <button class="copy-button" id="copy-bibtex" type="button" aria-label="Copy BibTeX citation">
+          <i class="far fa-copy" aria-hidden="true"></i>
+          <span>Copy</span>
+        </button>
+        <pre class="bibtex-block"><code id="bibtex-code">@misc{chi2026pvwm,
+  title         = {PV-WM: A Heterogeneous Micro-Macro World Model for Articulated Pedestrian-Vehicle Co-Rollout},
+  author        = {Haozhuang Chi and Jingsong Liang and Ziying Song and Lei Yang and Shihao Li and Haoruo Zhang and Chen Lv},
+  year          = {2026},
+  eprint        = {2609.07328},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.07328}
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="acknowledgements">
+    <div class="container is-max-desktop">
+      <div class="ack-card">
+        <div class="ack-icon"><i class="fas fa-circle-info" aria-hidden="true"></i></div>
+        <p>
+          Experiments use aligned tracks from the Waymo Open Dataset and Waymo-3DSkelMo. The schematic local-scene illustration in the architecture figure was generated with OpenAI ChatGPT and subsequently edited by the authors; it contains no experimental data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <p>PV-WM project page &middot; <a href="../">Haozhuang Chi</a> &middot; Page structure inspired by the <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies project page</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const copyButton = document.getElementById('copy-bibtex');
+    const bibtexCode = document.getElementById('bibtex-code');
+
+    copyButton.addEventListener('click', async () => {
+      const label = copyButton.querySelector('span');
+      try {
+        await navigator.clipboard.writeText(bibtexCode.textContent.trim());
+        label.textContent = 'Copied';
+        window.setTimeout(() => {
+          label.textContent = 'Copy';
+        }, 1800);
+      } catch (error) {
+        label.textContent = 'Select text to copy';
+      }
+    });
+  </script>
+</body>
+</html>

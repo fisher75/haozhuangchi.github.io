@@ -165,6 +165,15 @@ excerpt: >
     </div>
   </div>
 
+  <div class="card card--highlight-pv">
+    <a href="{{ '/pv-wm/' | relative_url }}"><img src="{{ '/assets/images/card_pvwm.png' | relative_url }}" alt="PV-WM" /></a>
+    <div class="card-body">
+      <div class="card-title">PV-WM <span class="paper-badge paper-badge--pv">arXiv 2026</span></div>
+      <p class="card-text">Heterogeneous micro-macro world modeling for articulated pedestrian-vehicle co-rollout and synchronized interaction geometry.</p>
+      <p><a class="btn btn--primary" href="{{ '/pv-wm/' | relative_url }}">Project page</a></p>
+    </div>
+  </div>
+
   <div class="card">
     <a href="{{ '/projects/' | relative_url }}#au-ttc"><img src="{{ '/assets/images/card_auttc.jpg' | relative_url }}" alt="AU-TTC" /></a>
     <div class="card-body">

@@ -8,27 +8,32 @@ nav: main_zh
 
 论文列表与我的 [Google Scholar 主页](https://scholar.google.com/citations?user=-leHBjoAAAAJ&hl=zh-CN) 对齐。
 
-1. **Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout.** <span class="paper-badge">ECCV 2026</span>  
+1. **PV-WM: A Heterogeneous Micro-Macro World Model for Articulated Pedestrian-Vehicle Co-Rollout.** <span class="paper-badge paper-badge--pv">arXiv 2026</span><br>
+   Haozhuang Chi, Jingsong Liang, Ziying Song, Lei Yang, Shihao Li, Haoruo Zhang, Chen Lv.<br>
+   *arXiv 预印本，2026.*<br>
+   项目页：**[PV-WM]({{ '/pv-wm/' | relative_url }})** · arXiv：**[2609.07328](https://arxiv.org/abs/2609.07328)** · PDF：**[arXiv PDF](https://arxiv.org/pdf/2609.07328)**
+
+2. **Driver-WM: A Driver-Centric Traffic-Conditioned Latent World Model for In-Cabin Dynamics Rollout.** <span class="paper-badge">ECCV 2026</span><br>
    Haozhuang Chi, Daosheng Qiu, Hao Su, Haochen Liu, Zirui Li, Haoruo Zhang, Chen Lv.  
    *European Conference on Computer Vision (ECCV), 2026.*  
    项目页：**[Driver-WM]({{ '/driver-wm/' | relative_url }})** · arXiv：**[2605.05092](https://arxiv.org/abs/2605.05092)** · PDF：**[arXiv PDF](https://arxiv.org/pdf/2605.05092)**
 
-2. **Risk-Aware Selective Multimodal Driver Monitoring with Driver-State World Modeling.**<br>
+3. **Risk-Aware Selective Multimodal Driver Monitoring with Driver-State World Modeling.**<br>
    Daosheng Qiu, Haozhuang Chi, Hao Su, Shu Long, Xinyue Miao, Yongle Dong, Wei Zhang.<br>
    *arXiv 预印本，2026.*<br>
    arXiv：**[2606.26922](https://arxiv.org/abs/2606.26922)** · PDF：**[arXiv PDF](https://arxiv.org/pdf/2606.26922)**
 
-3. **Event-Driven Proactive Assistive Manipulation with Grounded Vision-Language Planning.**<br>
+4. **Event-Driven Proactive Assistive Manipulation with Grounded Vision-Language Planning.**<br>
    Fengkai Liu, Hao Su, Haozhuang Chi, Rui Geng, Congzhi Ren, Xuqing Liu, Yucheng Xu, Yuichi Ohsita, Liyun Zhang.  
    *arXiv preprint, 2026.*  
    arXiv：**[2603.23950](https://arxiv.org/abs/2603.23950)**
 
-4. **VLM-DM: Visual Language Models for Multitask Domain Adaptation in Driver Monitoring.** <span class="paper-badge paper-badge--blue">IEEE IV 2025</span><br>
+5. **VLM-DM: Visual Language Models for Multitask Domain Adaptation in Driver Monitoring.** <span class="paper-badge paper-badge--blue">IEEE IV 2025</span><br>
    Haozhuang Chi, Haohan Yang, Lie Yang, Chen Lv.  
    *2025 IEEE Intelligent Vehicles Symposium (IV), pp. 1280-1285, 2025.*  
    DOI：**[10.1109/IV64158.2025.11097620](https://doi.org/10.1109/IV64158.2025.11097620)** · PDF：**[VLM-DM_IV2025.pdf]({{ '/assets/papers/VLM-DM_IV2025.pdf' | relative_url }})** · 项目页：**[VLM-DM]({{ '/zh/projects/vlm-dm/' | relative_url }})**
 
-5. **Applications of Large Language Models and Multimodal Large Models in Autonomous Driving: A Comprehensive Review.**<br>
+6. **Applications of Large Language Models and Multimodal Large Models in Autonomous Driving: A Comprehensive Review.**<br>
    Jing Li, Jingyuan Li, Guo Yang, Lie Yang, Haozhuang Chi, Lichao Yang.  
    *Drones, 9(4):238, 2025.*  
    DOI：**[10.3390/drones9040238](https://doi.org/10.3390/drones9040238)**

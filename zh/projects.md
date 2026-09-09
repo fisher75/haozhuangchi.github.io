@@ -42,6 +42,18 @@ nav: main_zh
     </div>
   </div>
 
+  <div class="card card--highlight-pv" id="pv-wm">
+    <a href="{{ '/pv-wm/' | relative_url }}"><img src="{{ '/assets/images/card_pvwm.png' | relative_url }}" alt="PV-WM 项目卡片" /></a>
+    <div class="card-body">
+      <div class="card-title">PV-WM <span class="paper-badge paper-badge--pv">arXiv 2026</span></div>
+      <p class="card-text">异构微观—宏观世界模型，联合推演行人关节运动、刚体车辆状态以及同步更新的交互几何关系。</p>
+      <p class="project-links">
+        <a class="btn btn--primary" href="{{ '/pv-wm/' | relative_url }}">项目页</a>
+        <a class="btn" href="https://arxiv.org/abs/2609.07328">arXiv</a>
+      </p>
+    </div>
+  </div>
+
   <div class="card" id="au-ttc">
     <a href="#au-ttc"><img src="{{ '/assets/images/card_auttc.jpg' | relative_url }}" alt="AU-TTC 项目卡片" /></a>
     <div class="card-body">
