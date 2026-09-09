@@ -104,21 +104,6 @@
       position: relative;
     }
 
-    .project-home {
-      align-items: center;
-      color: var(--pv-muted);
-      display: inline-flex;
-      font-family: 'Google Sans', sans-serif;
-      font-size: 0.9rem;
-      gap: 0.45rem;
-      margin-bottom: 1.8rem;
-    }
-
-    .project-home:hover {
-      color: var(--pv-blue);
-      text-decoration: none;
-    }
-
     .title-lockup {
       align-items: center;
       display: flex;
@@ -174,33 +159,47 @@
       margin: 0 0.55rem;
     }
 
-    .institution-strip {
+    .logo-strip {
       align-items: center;
+      border-bottom: 1px solid var(--pv-rule);
+      border-top: 1px solid var(--pv-rule);
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
+      gap: 1.3rem;
       justify-content: center;
-      margin: 1.15rem auto 0.95rem;
+      margin: 1.35rem auto 1.1rem;
+      max-width: 860px;
+      padding: 0.9rem 1rem;
     }
 
-    .institution-chip {
+    .organization-logo-link {
       align-items: center;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid var(--pv-rule);
-      border-radius: 999px;
-      color: var(--pv-navy);
       display: inline-flex;
-      font-family: 'Google Sans', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 700;
-      gap: 0.45rem;
-      padding: 0.46rem 0.78rem;
+      justify-content: center;
+      transition: opacity 160ms ease, transform 160ms ease;
     }
 
-    .institution-chip:hover {
-      border-color: #adc9e8;
-      color: var(--pv-blue);
+    .organization-logo-link:hover,
+    .organization-logo-link:focus {
+      opacity: 0.82;
       text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .organization-logo {
+      display: block;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .logo-ntu {
+      height: 46px;
+      max-width: 190px;
+    }
+
+    .logo-automan {
+      height: 38px;
+      max-width: 220px;
     }
 
     .publication-links {
@@ -699,10 +698,6 @@
         padding: 1.3rem 1.1rem 2rem;
       }
 
-      .project-home {
-        margin-bottom: 1.25rem;
-      }
-
       .title-lockup {
         align-items: center;
         gap: 0.8rem;
@@ -726,8 +721,19 @@
         font-size: 0.88rem;
       }
 
-      .institution-strip {
+      .logo-strip {
+        gap: 0.9rem;
         margin-top: 0.9rem;
+      }
+
+      .logo-ntu {
+        height: 38px;
+        max-width: 160px;
+      }
+
+      .logo-automan {
+        height: 32px;
+        max-width: 170px;
       }
 
       .section {
@@ -811,11 +817,6 @@
   <section class="hero publication-header">
     <div class="hero-body">
       <div class="container is-max-widescreen">
-        <a class="project-home" href="../">
-          <i class="fas fa-arrow-left" aria-hidden="true"></i>
-          <span>Haozhuang Chi</span>
-        </a>
-
         <div class="title-lockup reveal">
           <img class="project-logo" src="./static/images/logos/pvwm-icon.svg" width="256" height="256" alt="PV-WM project logo">
           <h1 class="publication-title">
@@ -838,14 +839,12 @@
           <span class="affiliation-block"><sup>2</sup>Beijing Institute of Technology, China</span>
         </div>
 
-        <div class="institution-strip reveal reveal-delay-2">
-          <a class="institution-chip" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-building-columns" aria-hidden="true"></i>
-            <span>NTU Singapore</span>
+        <div class="logo-strip reveal reveal-delay-2" role="group" aria-label="Affiliated organizations">
+          <a class="organization-logo-link" href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer" aria-label="Visit Nanyang Technological University">
+            <img class="organization-logo logo-ntu" src="./static/images/logos/ntu_logo.png" width="3006" height="1079" alt="Nanyang Technological University logo">
           </a>
-          <a class="institution-chip" href="https://english.bit.edu.cn/" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-building-columns" aria-hidden="true"></i>
-            <span>Beijing Institute of Technology</span>
+          <a class="organization-logo-link" href="https://lvchen.wixsite.com/automan" target="_blank" rel="noopener noreferrer" aria-label="Visit the AutoMan Lab">
+            <img class="organization-logo logo-automan" src="./static/images/logos/automan.png" width="552" height="112" alt="AutoMan Lab logo">
           </a>
         </div>
 
