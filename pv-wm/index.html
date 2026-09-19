@@ -243,6 +243,32 @@
       padding-top: 1.2rem;
     }
 
+    .video-section {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(30, 174, 219, 0.09), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(114, 88, 222, 0.07), transparent 26%),
+        linear-gradient(180deg, #f7fafc 0%, #f2f7fb 100%);
+    }
+
+    .video-frame {
+      background: var(--pv-navy-deep);
+      border: 1px solid rgba(16, 45, 82, 0.16);
+      border-radius: 18px;
+      box-shadow: 0 20px 52px rgba(8, 24, 44, 0.14);
+      margin: 0 auto;
+      max-width: 1120px;
+      overflow: hidden;
+    }
+
+    .project-video {
+      aspect-ratio: 16 / 9;
+      background: #fff;
+      display: block;
+      height: auto;
+      object-fit: contain;
+      width: 100%;
+    }
+
     .figure-shell {
       background: var(--pv-white);
       border-radius: 14px;
@@ -868,6 +894,12 @@
             </span>
           </span>
           <span class="link-block">
+            <a class="button is-normal is-rounded is-pv" href="#video">
+              <span class="icon"><i class="fas fa-circle-play"></i></span>
+              <span>Video</span>
+            </a>
+          </span>
+          <span class="link-block">
             <a class="button is-normal is-rounded is-pv" href="#results">
               <span class="icon"><i class="fas fa-chart-line"></i></span>
               <span>Results</span>
@@ -896,6 +928,26 @@
       </div>
       <p class="caption">
         PV-WM bridges macro agent forecasting and articulated pedestrian prediction. From structured observation histories, it jointly rolls out pedestrian root motion, 15-joint articulation, rigid-vehicle states, oriented boxes, and synchronized pedestrian-vehicle relations.
+      </p>
+    </div>
+  </section>
+
+  <section class="section video-section" id="video">
+    <div class="container is-max-widescreen">
+      <div class="section-heading">
+        <div class="eyebrow">Visualization</div>
+        <h2 class="section-title">PV-WM in Motion</h2>
+        <p class="section-lead">A visual walkthrough of heterogeneous scene states, articulated pedestrian-vehicle co-rollouts, synchronized interaction geometry, and recurrent feedback analysis.</p>
+      </div>
+
+      <div class="video-frame">
+        <video class="project-video" controls playsinline preload="metadata" poster="./static/images/figures/pvwm_video_poster.webp" aria-label="PV-WM visual overview">
+          <source src="./static/videos/pvwm_visual_overview.mp4" type="video/mp4">
+          Your browser does not support the HTML5 video element.
+        </video>
+      </div>
+      <p class="caption">
+        The overview moves from aligned scene context to generated-state rollouts, then examines pedestrian-vehicle geometry and controlled articulation-feedback interventions.
       </p>
     </div>
   </section>
